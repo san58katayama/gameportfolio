@@ -238,7 +238,7 @@ document.getElementById('lang-toggle').addEventListener('click', () => {
 /* ==========================================================================
    Skill Bar Animation using Intersection Observer
    ========================================================================== */
-const skillSection = document.getElementById('about');
+const skillSection = document.querySelector('.skills-list-compact');
 const skillBars = document.querySelectorAll('.skill-bar-fill');
 
 // 初期状態でスキルバーを0%にしておく (CSSインラインでwidthを指定しているので、一度初期化)
@@ -259,7 +259,7 @@ const skillObserver = new IntersectionObserver((entries) => {
     }
   });
 }, {
-  threshold: 0.2
+  threshold: 0.1
 });
 
 if (skillSection) {
