@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>K. Katayama | Game Planner Portfolio</title>
+  <link rel="stylesheet" href="style.css">
+  <!-- Google Fonts & Icon -->
+  <link href="https://fonts.googleapis.com/css2?family=Bangers&family=Outfit:wght@300;400;600;800&family=Noto+Sans+JP:wght@300;400;700;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+</head>
+<body>
+
+  <!-- 背景用のドットパターン -->
+  <div class="bg-glow"></div>
+
+  <!-- ヘッダーナビゲーション -->
+  <header>
+    <div class="header-container">
+      <a href="#" class="logo">K.<span>Katayama</span></a>
+      <nav>
+        <a href="#hero" data-i18n="nav_home">Home</a>
+        <a href="#about" data-i18n="nav_about">About &amp; Skills</a>
+        <a href="#works" data-i18n="nav_works">Works</a>
+        <a href="#events" data-i18n="nav_events">Events</a>
+        <a href="#recent" data-i18n="nav_recent">Recent</a>
+        <a href="#contact" data-i18n="nav_contact">Contact</a>
+      </nav>
+      <div class="header-right">
+        <button id="lang-toggle" class="lang-btn" aria-label="言語切り替え">
+          <span class="lang-jp">JP</span>
+          <span class="lang-divider">/</span>
+          <span class="lang-en">EN</span>
+        </button>
+        <div class="menu-toggle">
+          <span class="material-symbols-outlined">menu</span>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- ヒーローセクション -->
+  <section id="hero" class="hero-section">
+    <div class="hero-content">
+      <div class="badge" data-i18n="hero_badge">GAME PLANNER / ゲームプランナー</div>
+      <h1 data-i18n="hero_title"><span class="title-line">発想力で世界を沸かす</span><br><span class="title-line">ドキドキプランナー！</span></h1>
+      <p data-i18n="hero_desc">ゲームの面白さを設計・言語化し、プレイヤーが思わず没頭してしまうような体験づくりに情熱を注いでいます。企画立案からレベルデザイン、仕様書作成まで、ゲームの「楽しさ」を追求します。</p>
+      <div class="hero-btns">
+        <a href="#works" class="btn btn-primary" data-i18n="hero_btn_works">作品を見る</a>
+        <a href="#about" class="btn btn-outline" data-i18n="hero_btn_about">自己紹介</a>
+      </div>
+    </div>
+    <div class="hero-image-container">
+      <div class="hero-image-card">
+        <img src="assets/profile.jpg" alt="K. Katayama">
+      </div>
+    </div>
+    <div class="hero-scroll">
+      <span class="mouse">
+        <span class="wheel"></span>
+      </span>
+      <span class="scroll-text">SCROLL DOWN</span>
+    </div>
+  </section>
+
+  <!-- 自己紹介 & スキルセクション -->
+  <section id="about" class="section-container bg-dark-section">
+    <div class="profile-skills-grid">
+      <!-- 左カラム: 自己紹介 -->
+      <div class="profile-col">
+        <h2 class="section-title left-align">ABOUT ME<span data-i18n="about_title_sub">自己紹介</span></h2>
+        <div class="about-flex-compact">
+          <div class="about-profile-header">
+            <div class="about-avatar-container">
+              <div class="about-avatar-placeholder">
+                <img src="assets/avatar.png" alt="K. Katayama Avatar" class="about-avatar-img">
+              </div>
+              <div class="about-links">
+                <a href="https://x.com/katayama_589" target="_blank" rel="noopener noreferrer" class="about-link-btn x-btn">
+                  <svg viewBox="0 0 24 24" fill="currentColor" width="16" height="16" aria-hidden="true">
+                    <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.746l7.73-8.835L1.254 2.25H8.08l4.261 5.632 5.902-5.632zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
+                  </svg>
+                  <span>X (Twitter)</span>
+                </a>
+                <a href="https://unityroom.com/users/ypih9q1btw5uj6okn2el" target="_blank" rel="noopener noreferrer" class="about-link-btn unityroom-btn">
+                  <span class="material-symbols-outlined" style="font-size: 1.1rem;">sports_esports</span>
+                  <span>unityroom</span>
+                </a>
+              </div>
+            </div>
+            
+            <div class="about-profile-meta">
+              <div class="meta-row">
+                <span class="material-symbols-outlined">school</span>
+                <span data-i18n="about_meta_school">デジタルゲーム学系 ゲーム学科 2回生（2029年卒業予定）</span>
+              </div>
+              <div class="meta-row">
+                <span class="material-symbols-outlined">cake</span>
+                <span data-i18n="about_meta_birthday">2007年3月14日 ホワイトデーだね(⋈◍＞◡＜◍)。✧♡</span>
+              </div>
+              <div class="meta-row">
+                <span class="material-symbols-outlined">groups</span>
+                <span data-i18n="about_meta_club">ゲーム制作サークルハイミント副部長</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="about-text-compact">
+            <h3>片山 琥博 / K. Katayama</h3>
+            <p class="about-lead" data-i18n="about_lead">チーム制作、個人製作で修行中！</p>
+            <p data-i18n="about_p1">「面白い」とは何かを考え、遊んでもらうすべての方々にゲームの楽しさを知ってもらうために動きます！</p>
+            <p data-i18n="about_p2">仕様書や企画書も見やすく、読み手に楽しんでもらう事を意識しています！</p>
+            
+            <div class="about-achievements">
+              <h4 class="achievement-title" data-i18n="about_ach_title">🏆 実績 / Achievements</h4>
+              <ul class="achievement-list">
+                <li>
+                  <strong data-i18n="about_ach1">BSGJ2026審査員賞、審査員賞「Yolk you」</strong>
+                  <span data-i18n="about_ach1_role">（仕様書、レベルデザイン、プランナー担当）</span>
+                </li>
+              </ul>
+            </div>
+
+            <div class="about-info-list">
+              <div class="info-item"><strong data-i18n="about_school_label">学校名:</strong> <span data-i18n="about_school">京都コンピュータ学院駅前校</span></div>
+              <div class="info-item"><strong data-i18n="about_role_label">志望職種:</strong> <span data-i18n="about_role">ゲームプランナー</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 右カラム: スキル -->
+      <div class="skills-col">
+        <h2 class="section-title left-align">MY SKILLS<span data-i18n="skills_title_sub">スキル・使用ツール</span></h2>
+        <div class="skills-list-compact">
+
+          <div class="skill-item">
+            <div class="skill-info">
+              <span data-i18n="skill_planning">企画力</span>
+              <span>100%</span>
+            </div>
+            <div class="skill-bar-bg"><div class="skill-bar-fill" style="width: 100%;"></div></div>
+          </div>
+
+          <div class="skill-item">
+            <div class="skill-info">
+              <span data-i18n="skill_level">レベルデザイン</span>
+              <span>80%</span>
+            </div>
+            <div class="skill-bar-bg"><div class="skill-bar-fill" style="width: 80%;"></div></div>
+          </div>
+
+          <div class="skill-item">
+            <div class="skill-info">
+              <span data-i18n="skill_spec">仕様書</span>
+              <span>90%</span>
+            </div>
+            <div class="skill-bar-bg"><div class="skill-bar-fill" style="width: 90%;"></div></div>
+          </div>
+
+          <div class="skill-item">
+            <div class="skill-info">
+              <span data-i18n="skill_ppt">パワーポイント</span>
+              <span>90%</span>
+            </div>
+            <div class="skill-bar-bg"><div class="skill-bar-fill" style="width: 90%;"></div></div>
+          </div>
+
+          <div class="skill-item">
+            <div class="skill-info">
+              <span>Unity / UE</span>
+              <span>70%</span>
+            </div>
+            <div class="skill-bar-bg"><div class="skill-bar-fill" style="width: 70%;"></div></div>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+
+    <!-- 趣味セクション (2カラムの外に移動して中央配置) -->
+    <div class="about-hobbies">
+      <h4 class="hobbies-title" data-i18n="hobbies_title">🎯 趣味 / Hobbies</h4>
+      <div class="hobbies-grid">
+        <!-- 趣味1: 麻雀 -->
+        <div class="hobby-card">
+          <div class="hobby-img-wrapper">
+            <img src="assets/hobby_mahjong.jpg" alt="Mahjong">
+          </div>
+          <div class="hobby-info">
+            <span class="hobby-tag" data-i18n="hobby1_tag">MAHJONG</span>
+            <p data-i18n="hobby1_desc">頭脳戦と確率のゲーム！役づくりと押し引きの戦略を考えるのが大好きです。</p>
+          </div>
+        </div>
+
+        <!-- 趣味2: 猫 -->
+        <div class="hobby-card">
+          <div class="hobby-img-wrapper">
+            <img src="assets/hobby_cat.jpg" alt="Cat">
+          </div>
+          <div class="hobby-info">
+            <span class="hobby-tag" data-i18n="hobby2_tag">CAT</span>
+            <p data-i18n="hobby2_desc">癒しの相棒。お家でまったり過ごすときの最高のパートナーです。</p>
+          </div>
+        </div>
+
+        <!-- 趣味3: ラーメン -->
+        <div class="hobby-card">
+          <div class="hobby-img-wrapper">
+            <img src="assets/hobby_ramen.jpg" alt="Ramen">
+          </div>
+          <div class="hobby-info">
+            <span class="hobby-tag" data-i18n="hobby3_tag">RAMEN</span>
+            <p data-i18n="hobby3_desc">濃厚な家系ラーメンが好物！美味しいお店の開拓が日課です。</p>
+          </div>
+        </div>
+
+        <!-- 趣味4: グッズ収集 -->
+        <div class="hobby-card">
+          <div class="hobby-img-wrapper">
+            <img src="assets/hobby_anime.jpg" alt="Anime Goods">
+          </div>
+          <div class="hobby-info">
+            <span class="hobby-tag" data-i18n="hobby4_tag">GAME & GOODS</span>
+            <p data-i18n="hobby4_desc">好きなゲーム作品のグッズやフィギュアをコレクションして楽しんでいます。</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 作品ギャラリーセクション -->
+  <section id="works" class="section-container">
+    <h2 class="section-title">CREATIVE WORKS<span data-i18n="works_title_sub">制作実績</span></h2>
+
+
+
+    <!-- 作品グリッド -->
+    <div class="works-grid">
+      <!-- 作品1: Harvethm -->
+      <div class="work-card">
+        <div class="work-img-wrapper">
+          <img src="assets/game_harvethm.png" alt="Harvethm">
+        </div>
+        <div class="work-info">
+          <span class="work-tag" data-i18n="work1_tag">2D GAME / TEAM</span>
+          <h3 data-i18n="work1_title">Harvethm – ハーベズム –</h3>
+          <div class="work-role-exhibit">
+            <p class="work-role"><strong data-i18n="role_label">担当:</strong> <span data-i18n="work1_role">プランナー：仕様書：ギミック担当</span></p>
+            <p class="work-exhibit"><strong data-i18n="exhibit_label">出展:</strong> <span data-i18n="work1_exhibit">GGX #NEXUSJAM 出展</span></p>
+          </div>
+          <p class="work-desc" data-i18n="work1_desc">おじいちゃんの農園を継いでやってきた少女は、音楽の神様と出会い1年間の契約をします。作物を育てて演奏をする、音楽×農業ゲーム🎶収穫して得たお金で、自分だけの音色に拡張することも……！</p>
+          <div class="work-action">
+            <a href="https://utsusegi-game.itch.io/ggx2025-harvethm" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-play" data-i18n="play_btn">ゲームをプレイする 🎮</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- 作品2: Yolk you -->
+      <div class="work-card">
+        <div class="work-img-wrapper">
+          <img src="assets/game_yolk_you.png" alt="Yolk you">
+        </div>
+        <div class="work-info">
+          <span class="work-tag" data-i18n="work2_tag">2D GAME / TEAM</span>
+          <h3 data-i18n="work2_title">Yolk you</h3>
+          <div class="work-role-exhibit">
+            <p class="work-role"><strong data-i18n="role_label">担当:</strong> <span data-i18n="work2_role">プランナー：仕様書：ギミック担当：レベルデザイン</span></p>
+            <p class="work-exhibit"><strong data-i18n="exhibit_label">出展:</strong> <span data-i18n="work2_exhibit">bitsummit-gamejam2026 出展</span></p>
+          </div>
+          <p class="work-desc" data-i18n="work2_desc">「あなたは”白身”、黄身をこぼさず目的地までたどり着こう！」キッチンから飛び出し、森を抜け、最後にはなんと○○に進む！道中には、卵を狙うカラスなどたくさんの困難が待ち構える！協力してワイワイ！黄身がこぼれるドキドキ！協力2Dジャンプアクションゲーム！！</p>
+          <div class="work-action">
+            <a href="https://bitsummit-gamejam.itch.io/yolk-you" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-play" data-i18n="play_btn">ゲームをプレイする 🎮</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- 作品3: Black & White -->
+      <div class="work-card">
+        <div class="work-img-wrapper">
+          <img src="assets/game_black_white.png" alt="Black & White">
+        </div>
+        <div class="work-info">
+          <span class="work-tag" data-i18n="work3_tag">2D GAME / SOLO</span>
+          <h3 data-i18n="work3_title">Black ＆ White</h3>
+          <div class="work-role-exhibit">
+            <p class="work-role"><strong data-i18n="role_label">担当:</strong> <span data-i18n="work3_role">ソロ開発</span></p>
+            <p class="work-exhibit"><strong data-i18n="exhibit_label">出展:</strong> <span data-i18n="work3_exhibit">ゲームパビリオンjp2026 出展 / bitsummit2026 出展</span></p>
+          </div>
+          <p class="work-desc" data-i18n="work3_desc">キューブで表の世界と裏の世界を動かします</p>
+          <div class="work-action">
+            <a href="https://unityroom.com/games/cube-black-white" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-play" data-i18n="play_btn">ゲームをプレイする 🎮</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- イベント実績セクション -->
+  <section id="events" class="section-container bg-dark-section">
+    <h2 class="section-title">EVENT ACTIVITIES<span data-i18n="events_title_sub">イベント実績</span></h2>
+    <div class="events-grid">
+      <!-- 左カラム: 写真コラージュ -->
+      <div class="events-collage">
+        <div class="collage-card card1">
+          <img src="assets/event_kcg1.jpg" alt="KCG BitSummit 2026 Team">
+          <div class="collage-caption" data-i18n="event_caption1">BitSummit 2026 ボランティアチーム</div>
+        </div>
+        <div class="collage-card card2">
+          <img src="assets/event_kyunto.jpg" alt="KBSきゅんと！スタジオ出演">
+          <div class="collage-caption" data-i18n="event_caption2">KBS京都「きゅんと！」テレビ出演</div>
+        </div>
+        <div class="collage-card card3">
+          <img src="assets/event_kcg2.jpg" alt="KCG BitSummit 2025 Team">
+          <div class="collage-caption" data-i18n="event_caption3">BitSummit 2025 ボランティアチーム</div>
+        </div>
+      </div>
+
+      <!-- 右カラム: 実績リスト -->
+      <div class="events-list-container">
+        <div class="event-item-speechbubble">
+          <span class="speech-star">★</span>
+          <div class="event-item-text" data-i18n="event_item1">OGF2025</div>
+        </div>
+        <div class="event-item-speechbubble">
+          <span class="speech-star">★</span>
+          <div class="event-item-text" data-i18n="event_item2">bitsummit2025</div>
+        </div>
+        <div class="event-item-speechbubble">
+          <span class="speech-star">★</span>
+          <div class="event-item-text" data-i18n="event_item3">大阪万博：京都ブース お手伝い</div>
+        </div>
+        <div class="event-item-speechbubble">
+          <span class="speech-star">★</span>
+          <div class="event-item-text" data-i18n="event_item4">大阪インディーゲームサミット2025</div>
+        </div>
+        <div class="event-item-speechbubble">
+          <span class="speech-star">★</span>
+          <div class="event-item-text" data-i18n="event_item5">KBS京都情報系番組「きゅんと」出演</div>
+        </div>
+        <div class="event-item-speechbubble">
+          <span class="speech-star">★</span>
+          <div class="event-item-text" data-i18n="event_item6">GGX</div>
+        </div>
+        <div class="event-item-speechbubble">
+          <span class="speech-star">★</span>
+          <div class="event-item-text" data-i18n="event_item7">SEIKAサブカルフェスタ2025</div>
+        </div>
+        <div class="event-item-speechbubble">
+          <span class="speech-star">★</span>
+          <div class="event-item-text" data-i18n="event_item8">京都企業説明会MC</div>
+        </div>
+        <div class="event-item-speechbubble">
+          <span class="speech-star">★</span>
+          <div class="event-item-text" data-i18n="event_item9">オープンキャンパススタッフ</div>
+        </div>
+        <div class="event-item-speechbubble">
+          <span class="speech-star">★</span>
+          <div class="event-item-text" data-i18n="event_item10">bitsummit2026</div>
+        </div>
+        <div class="event-item-speechbubble">
+          <span class="speech-star">★</span>
+          <div class="event-item-text" data-i18n="event_item11">RIT様との合同JAM</div>
+        </div>
+      </div>
+  </section>
+
+  <!-- 最近の動向セクション -->
+  <section id="recent" class="section-container">
+    <h2 class="section-title">RECENT ACTIVITY<span data-i18n="recent_title_sub">最近の動向</span></h2>
+    <div>
+      <div class="recent-status-badge" data-i18n="recent_status">コツコツ頑張ってます！</div>
+    </div>
+    
+    <div class="trends-grid">
+      <!-- 項目1 -->
+      <div class="trend-card">
+        <h3><span class="material-symbols-outlined">rocket_launch</span><span data-i18n="recent_item1_title">学校内でのJAMに参加中！</span></h3>
+        <p data-i18n="recent_item1_desc">学内のクリエイター仲間と協力し、限られた時間の中で新しいアイデアのゲーム開発に挑戦しています！</p>
+      </div>
+
+      <!-- 項目2 -->
+      <div class="trend-card">
+        <h3><span class="material-symbols-outlined">groups</span><span data-i18n="recent_item2_title">サークル活動のJAMに参加中！</span></h3>
+        <p data-i18n="recent_item2_desc">ゲーム制作サークル「ハイミント」の仲間たちと共同で、企画から実装まで役割を分担して制作中です！</p>
+      </div>
+
+      <!-- 項目3 -->
+      <div class="trend-card">
+        <h3><span class="material-symbols-outlined">description</span><span data-i18n="recent_item3_title">最近はこんな企画書（3枚）を書きました！</span></h3>
+        <p data-i18n="recent_item3_desc">『Time is Experience』という2Dアクションゲームの企画書です。コンセプト設計から仕様の言語化まで行いました。</p>
+        <div class="trend-img-container">
+          <img src="assets/recent_doc.png" alt="Recent GDD">
+        </div>
+      </div>
+
+      <!-- 項目4 -->
+      <div class="trend-card">
+        <h3><span class="material-symbols-outlined">emoji_events</span><span data-i18n="recent_item4_title">APEX大会で優勝しました！</span></h3>
+        <p data-i18n="recent_item4_desc">10th Crowd Fes ver. Apex Legends WILD CARDにて、チーム「KeSSA」として見事優勝を勝ち取りました！🏆</p>
+        <div class="trend-img-container">
+          <img src="assets/recent_apex.png" alt="APEX Winner KeSSA">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- お問い合わせセクション -->
+  <section id="contact" class="section-container">
+    <h2 class="section-title" data-i18n="contact_title">CONTACT<span data-i18n="contact_title_sub">お問い合わせ</span></h2>
+    <div class="contact-box">
+      <p class="contact-desc" data-i18n="contact_desc">企画、制作に関するご連絡や、作品へのご意見などはメールやXのダイレクトメッセージ等でお気軽にご連絡ください。</p>
+      <a href="https://x.com/katayama_589" target="_blank" rel="noopener noreferrer" class="contact-x-btn">
+        <svg viewBox="0 0 24 24" fill="currentColor" width="20" height="20" aria-hidden="true">
+          <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.746l7.73-8.835L1.254 2.25H8.08l4.261 5.632 5.902-5.632zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
+        </svg>
+        <span data-i18n="contact_x_btn">@katayama_589</span>
+      </a>
+    </div>
+  </section>
+
+  <!-- フッター -->
+  <footer>
+    <div class="footer-container">
+      <p>&copy; 2026 K. Katayama. All Rights Reserved.</p>
+      <div class="footer-links">
+        <a href="#hero" data-i18n="nav_home">Home</a>
+        <a href="#about" data-i18n="nav_about_short">About</a>
+        <a href="#works" data-i18n="nav_works">Works</a>
+        <a href="#events" data-i18n="nav_events">Events</a>
+        <a href="#recent" data-i18n="nav_recent">Recent</a>
+        <a href="#contact" data-i18n="nav_contact">Contact</a>
+      </div>
+    </div>
+  </footer>
+
+
+
+  <script src="main.js"></script>
+</body>
+</html>
