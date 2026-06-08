@@ -16,7 +16,7 @@ const translations = {
     hero_btn_works:  "作品を見る",
     hero_btn_about:  "自己紹介",
     about_title_sub: "自己紹介",
-    about_lead:      "チーム制作、個人製作で修行中！",
+    about_lead:      "チーム制作、個人制作で修行中！",
     about_p1:        "「面白い」とは何かを考え、遊んでもらうすべての方々にゲームの楽しさを知ってもらうために動きます！",
     about_p2:        "仕様書や企画書も見やすく、読み手に楽しんでもらう事を意識しています！",
     about_ach_title: "🏆 実績",
