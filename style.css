@@ -1469,6 +1469,92 @@ footer p {
 }
 
 /* ==========================================================================
+   Recent Activity Section
+   ========================================================================== */
+.recent-status-badge {
+  display: inline-block;
+  padding: 10px 24px;
+  background: var(--primary);
+  border: var(--border-thick);
+  color: #fff;
+  font-family: var(--font-base);
+  font-weight: 900;
+  font-size: 1.1rem;
+  letter-spacing: 1px;
+  margin-bottom: 3rem;
+  box-shadow: var(--shadow-sm);
+  transform: rotate(-1deg);
+}
+
+.trends-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2.5rem;
+  text-align: left;
+}
+
+.trend-card {
+  background: #fff;
+  border: var(--border-thick);
+  box-shadow: var(--shadow);
+  padding: 2rem;
+  border-radius: 4px;
+  display: flex;
+  flex-direction: column;
+  transition: var(--transition);
+}
+
+.trend-card h3 {
+  font-family: var(--font-base);
+  font-size: 1.3rem;
+  font-weight: 900;
+  color: var(--text-main);
+  margin-bottom: 1rem;
+  border-bottom: 2px solid #000;
+  padding-bottom: 0.5rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.trend-card h3 span.material-symbols-outlined {
+  color: var(--primary);
+  font-size: 1.5rem;
+}
+
+.trend-card p {
+  font-size: 0.95rem;
+  color: var(--text-sub);
+  line-height: 1.6;
+  font-weight: 700;
+}
+
+.trend-card:hover {
+  transform: translate(-3px, -3px) rotate(0.5deg);
+  box-shadow: 12px 12px 0px #000;
+}
+
+.trend-card:nth-child(even):hover {
+  transform: translate(-3px, -3px) rotate(-0.5deg);
+}
+
+.trend-img-container {
+  width: 100%;
+  margin-top: 1.25rem;
+  border: var(--border);
+  box-shadow: var(--shadow-sm);
+  overflow: hidden;
+  border-radius: 4px;
+  background: #f7f5ee;
+}
+
+.trend-img-container img {
+  width: 100%;
+  display: block;
+  object-fit: cover;
+}
+
+/* ==========================================================================
    Responsive Styles
    ========================================================================== */
 @media (max-width: 992px) {
@@ -1609,88 +1695,3 @@ footer p {
   }
 }
 
-/* ==========================================================================
-   Recent Activity Section
-   ========================================================================== */
-.recent-status-badge {
-  display: inline-block;
-  padding: 10px 24px;
-  background: var(--primary);
-  border: var(--border-thick);
-  color: #fff;
-  font-family: var(--font-base);
-  font-weight: 900;
-  font-size: 1.1rem;
-  letter-spacing: 1px;
-  margin-bottom: 3rem;
-  box-shadow: var(--shadow-sm);
-  transform: rotate(-1deg);
-}
-
-.trends-grid {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 2.5rem;
-  text-align: left;
-}
-
-.trend-card {
-  background: #fff;
-  border: var(--border-thick);
-  box-shadow: var(--shadow);
-  padding: 2rem;
-  border-radius: 4px;
-  display: flex;
-  flex-direction: column;
-  transition: var(--transition);
-}
-
-.trend-card h3 {
-  font-family: var(--font-base);
-  font-size: 1.3rem;
-  font-weight: 900;
-  color: var(--text-main);
-  margin-bottom: 1rem;
-  border-bottom: 2px solid #000;
-  padding-bottom: 0.5rem;
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
-}
-
-.trend-card h3 span.material-symbols-outlined {
-  color: var(--primary);
-  font-size: 1.5rem;
-}
-
-.trend-card p {
-  font-size: 0.95rem;
-  color: var(--text-sub);
-  line-height: 1.6;
-  font-weight: 700;
-}
-
-.trend-card:hover {
-  transform: translate(-3px, -3px) rotate(0.5deg);
-  box-shadow: 12px 12px 0px #000;
-}
-
-.trend-card:nth-child(even):hover {
-  transform: translate(-3px, -3px) rotate(-0.5deg);
-}
-
-.trend-img-container {
-  width: 100%;
-  margin-top: 1.25rem;
-  border: var(--border);
-  box-shadow: var(--shadow-sm);
-  overflow: hidden;
-  border-radius: 4px;
-  background: #f7f5ee;
-}
-
-.trend-img-container img {
-  width: 100%;
-  display: block;
-  object-fit: cover;
-}
