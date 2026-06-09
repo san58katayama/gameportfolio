@@ -85,6 +85,13 @@ const translations = {
     work3_exhibit:   "ゲームパビリオンjp2026 出展 / bitsummit2026 出展",
     work3_desc:      "キューブで表の世界と裏の世界を動かします。",
 
+    // Oxゲーム
+    work4_tag:       "2D GAME / SOLO",
+    work4_title:     "Oxゲーム",
+    work4_role:      "ソロ開発",
+    work4_exhibit:   "Web公開",
+    work4_desc:      "帰宅中...キーホルダーでゲームした懐かしさを...",
+
     // Recent Activity
     recent_title_sub: "最近の動向",
     recent_status:   "コツコツ頑張ってます！",
@@ -184,6 +191,13 @@ const translations = {
     work3_role:      "Solo Developer",
     work3_exhibit:   "Game Pavilion jp 2026 / BitSummit 2026",
     work3_desc:      "Move the front world and the back world using a cube.",
+
+    // Ox Game
+    work4_tag:       "2D GAME / SOLO",
+    work4_title:     "Ox Game",
+    work4_role:      "Solo Developer",
+    work4_exhibit:   "Web Release",
+    work4_desc:      "On the way home... recalling the nostalgia of playing games on keychains...",
 
     // Recent Activity
     recent_title_sub: "Recent Activity",
