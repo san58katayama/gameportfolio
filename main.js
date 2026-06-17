@@ -92,6 +92,13 @@ const translations = {
     work4_exhibit:   "Web公開",
     work4_desc:      "帰宅中...キーホルダーでゲームした懐かしさを...",
 
+    // Recoil Flight
+    work5_tag:       "2D GAME / TEAM",
+    work5_title:     "Recoil Flight",
+    work5_role:      "メインプランナー、レベルデザイン、UI、SE：BGM",
+    work5_exhibit:   "Web公開",
+    work5_desc:      "弾を発射し反動で進もう！<br>感覚と反射神経がカギになる！<br>敵に当たっても死なない！そして敵に弾を当てると弾が復活するぞ！<br><br>全部で5ステージ！君はクリアできるのか...",
+
     // Recent Activity
     recent_title_sub: "最近の動向",
     recent_status:   "コツコツ頑張ってます！",
@@ -198,6 +205,13 @@ const translations = {
     work4_role:      "Solo Developer",
     work4_exhibit:   "Web Release",
     work4_desc:      "On the way home... recalling the nostalgia of playing games on keychains...",
+
+    // Recoil Flight
+    work5_tag:       "2D GAME / TEAM",
+    work5_title:     "Recoil Flight",
+    work5_role:      "Main Planner, Level Design, UI, SE: BGM",
+    work5_exhibit:   "Web Release",
+    work5_desc:      "Shoot bullets and move forward with the recoil!<br>Your senses and reflexes are the key!<br>You won't die even if you hit an enemy! And if you hit them with a bullet, your ammo is restored!<br><br>5 stages in total! Can you clear them all...?",
 
     // Recent Activity
     recent_title_sub: "Recent Activity",
