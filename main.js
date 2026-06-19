@@ -81,14 +81,14 @@ const translations = {
     // Black & White
     work3_tag:       "2D GAME / SOLO",
     work3_title:     "Black ＆ White",
-    work3_role:      "ソロ開発（AI使用）",
+    work3_role:      "ソロ開発",
     work3_exhibit:   "ゲームパビリオンjp2026 出展 / bitsummit2026 出展",
     work3_desc:      "キューブで表の世界と裏の世界を動かします。",
 
     // Oxゲーム
     work4_tag:       "2D GAME / SOLO",
     work4_title:     "Oxゲーム",
-    work4_role:      "ソロ開発（AI使用）",
+    work4_role:      "ソロ開発",
     work4_exhibit:   "Web公開",
     work4_desc:      "帰宅中...キーホルダーでゲームした懐かしさを...",
 
@@ -195,14 +195,14 @@ const translations = {
     // Black & White
     work3_tag:       "2D GAME / SOLO",
     work3_title:     "Black & White",
-    work3_role:      "Solo Developer (using AI)",
+    work3_role:      "Solo Developer",
     work3_exhibit:   "Game Pavilion jp 2026 / BitSummit 2026",
     work3_desc:      "Move the front world and the back world using a cube.",
 
     // Ox Game
     work4_tag:       "2D GAME / SOLO",
     work4_title:     "Ox Game",
-    work4_role:      "Solo Developer (using AI)",
+    work4_role:      "Solo Developer",
     work4_exhibit:   "Web Release",
     work4_desc:      "On the way home... recalling the nostalgia of playing games on keychains...",
 
