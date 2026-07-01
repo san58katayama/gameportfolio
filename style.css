@@ -1559,12 +1559,6 @@ footer p {
   pointer-events: none;
 }
 
-/* ホバー時に浮き上がり、真っ直ぐにする */
-.trend-card:hover {
-  transform: scale(1.02) rotate(0deg) !important;
-  box-shadow: var(--shadow-hover);
-  z-index: 5;
-}
 
 .trend-card h3 {
   font-family: var(--font-base);
