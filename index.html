@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>K. Katayama | Game Planner Portfolio</title>
-  <link rel="stylesheet" href="style.css?v=1.0.6">
+  <link rel="stylesheet" href="style.css?v=1.1.5">
   <!-- Google Fonts & Icon -->
   <link href="https://fonts.googleapis.com/css2?family=Bangers&family=Outfit:wght@300;400;600;800&family=Noto+Sans+JP:wght@300;400;700;900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
@@ -93,7 +93,7 @@
             <div class="about-profile-meta">
               <div class="meta-row">
                 <span class="material-symbols-outlined">school</span>
-                <span data-i18n="about_school">京都コンピュータ学院駅前校</span>
+                <span data-i18n="about_school">京都コンピュータ学院京都駅前校</span>
               </div>
               <div class="meta-row">
                 <span class="material-symbols-outlined">menu_book</span>
@@ -111,6 +111,28 @@
             <p class="about-lead" data-i18n="about_lead">チーム制作、個人制作で修行中！</p>
             <p data-i18n="about_p1">「面白い」とは何かを考え、遊んでもらうすべての方々にゲームの楽しさを<br>知ってもらうために動きます！</p>
             <p data-i18n="about_p2">仕様書や企画書も見やすく、読み手に楽しんでもらう事を意識しています！</p>
+            
+            <div class="about-document-section">
+              <span class="document-section-tag" data-i18n="about_doc_title">企画書</span>
+              <p class="document-section-desc" data-i18n="about_doc_desc">企画の面白さを伝えるために世界観をしっかり書き、目に入りやすいレイアウトを意識しています</p>
+              
+              <div class="document-thumbnail-container">
+                <a href="assets/proposal_computer_berserker.pdf" target="_blank" rel="noopener noreferrer">
+                  <img src="assets/proposal_computer_berserker_thumb.png" alt="Computer Berserker GDD Thumbnail" class="document-thumbnail">
+                </a>
+              </div>
+            </div>
+            
+            <div class="about-document-section">
+              <span class="document-section-tag" data-i18n="about_spec_title">仕様書</span>
+              <p class="document-section-desc" data-i18n="about_spec_desc">仕様を伝えるために分かりやすく見やすいデザインで制作しています<br>特にレベルデザインに力を入れており狙いも同時に書いています</p>
+              
+              <div class="document-thumbnail-container no-hover">
+                <a href="assets/spec_yolk_you.png" target="_blank" rel="noopener noreferrer">
+                  <img src="assets/spec_yolk_you.png" alt="Yolk you Specification Thumbnail" class="document-thumbnail">
+                </a>
+              </div>
+            </div>
             
             <div class="about-achievements">
               <h4 class="achievement-title" data-i18n="about_ach_title">🏆 実績 / Achievements</h4>
@@ -179,9 +201,9 @@
                 <span class="skill-title" data-i18n="skill_unity_title">Unity</span>
                 <span class="skill-desc" data-i18n="skill_unity_desc">：タイルマップ：基本機能</span>
               </span>
-              <span>80%</span>
+              <span>70%</span>
             </div>
-            <div class="skill-bar-bg"><div class="skill-bar-fill" style="width: 80%;"></div></div>
+            <div class="skill-bar-bg"><div class="skill-bar-fill" style="width: 70%;"></div></div>
           </div>
 
           <!-- Unreal Engine -->
@@ -192,9 +214,9 @@
                 <span class="skill-title" data-i18n="skill_unreal_title">Unreal Engine</span>
                 <span class="skill-desc" data-i18n="skill_unreal_desc">：ムービー制作</span>
               </span>
-              <span>70%</span>
+              <span>40%</span>
             </div>
-            <div class="skill-bar-bg"><div class="skill-bar-fill" style="width: 70%;"></div></div>
+            <div class="skill-bar-bg"><div class="skill-bar-fill" style="width: 40%;"></div></div>
           </div>
 
           <!-- ティラノビルダー -->
@@ -205,9 +227,9 @@
                 <span class="skill-title" data-i18n="skill_tyrano_title">ティラノビルダー</span>
                 <span class="skill-desc" data-i18n="skill_tyrano_desc">：物語の制作</span>
               </span>
-              <span>70%</span>
+              <span>50%</span>
             </div>
-            <div class="skill-bar-bg"><div class="skill-bar-fill" style="width: 70%;"></div></div>
+            <div class="skill-bar-bg"><div class="skill-bar-fill" style="width: 50%;"></div></div>
           </div>
 
         </div>
@@ -217,7 +239,7 @@
 
     <!-- 最近の動向 -->
     <div id="recent" class="about-recent">
-      <h4 class="recent-title-about" data-i18n="recent_title_sub">最近の動向</h4>
+      <h2 class="section-title">RECENT UPDATES<span data-i18n="recent_title_sub">最近の動向</span></h2>
       <div>
         <div class="recent-status-badge" data-i18n="recent_status">コツコツ頑張ってます！</div>
       </div>
@@ -227,17 +249,7 @@
         <div class="trend-card no-hover">
           <h3><span class="material-symbols-outlined">rocket_launch</span><span data-i18n="recent_item1_title">学校内でのJAMに参加中！</span></h3>
           <p data-i18n="recent_item1_desc">学内のクリエイター仲間と協力し、限られた時間の中で新しいアイデアのゲーム開発に挑戦しています！</p>
-          <details class="trend-details">
-            <summary class="trend-summary" data-i18n="recent_item1_summary">得られたこと</summary>
-            <div class="trend-details-content">
-              <p data-i18n="recent_item1_details">
-                案をまとめて、メインプランナーのタスクや振り分けを<br>行いました！面白さや楽しさを設計することはもちろん<br>会議中も楽しく出来る会議を心がけました！
-              </p>
-              <div class="trend-img-container">
-                <img src="assets/recent_jam_school.png" alt="School JAM Brainstorming">
-              </div>
-            </div>
-          </details>
+          <a href="#recoil-flight" class="trend-link-btn" data-i18n="recent_item1_btn">作品を見る：Recoil Flight</a>
         </div>
 
         <!-- 項目2 -->
@@ -251,7 +263,7 @@
                 後輩育成の場やサークルという人をどう動かし<br>経験をしてもらうかを考え実行できる能力を<br>高めることができました！
               </p>
               <div class="trend-img-container">
-                <img src="assets/recent_jam_club.png" alt="Club JAM Progress">
+                <img src="assets/recent_jam_club.jpg" alt="Club JAM Progress">
               </div>
             </div>
           </details>
@@ -262,7 +274,9 @@
           <h3><span class="material-symbols-outlined">description</span><span data-i18n="recent_item3_title">最近はこんな企画書（3枚）を書きました！</span></h3>
           <p data-i18n="recent_item3_desc">『Time is Experience』という2Dアクションゲームの企画書です。コンセプト設計から仕様の言語化まで行いました。</p>
           <div class="trend-img-container">
-            <img src="assets/recent_doc.png" alt="Recent GDD">
+            <a href="assets/proposal_time_is_experience.pdf" target="_blank" rel="noopener noreferrer">
+              <img src="assets/recent_doc.png" alt="Recent GDD">
+            </a>
           </div>
         </div>
 
@@ -287,7 +301,7 @@
     <!-- 作品グリッド -->
     <div class="works-grid">
       <!-- 作品5: Recoil Flight -->
-      <div class="work-card">
+      <div class="work-card" id="recoil-flight">
         <div class="work-img-wrapper">
           <img src="assets/game_recoil_flight.png" alt="Recoil Flight">
         </div>
@@ -309,20 +323,21 @@
               </span>
             </summary>
             <div class="trend-details-content work-details-content">
-              <p data-i18n="work5_details_content">
+              <div data-i18n="work5_details_content">
+                <div class="details-section-title">💡 こだわり</div><br>
                 学校内のゲームJAMに参加し制作した作品です<br>
                 テーマは【発射】で考えられる案は沢山ありました<br>
                 何かを発射するのはシンプルなので違った案にしたいと考え銃の反動で進む【反動✖イライラ棒ゲーム】を制作しました！シンプルなデザインですがエフェクトにこだわりを入れております<br>
                 ゴールにたどり着くまでに死んで攻略そしてたどり着いた時のエフェクトと達成感の面白さを追求しました
                 <br>
-                ーーーーーーーーーーーーーーーーーーーーーーーーーーーーー<br>
-                <br>
+                <hr class="details-divider">
+                <div class="details-section-title experience-title">🔥 得られた経験</div><br>
                 チームには後輩の子がいたので案をどう考えて面白さを出すかを一緒に考えながら育成＋後輩にどう教えるかのコミュニケーション能力を高めました<br>
                 <br>
                 プログラマと寄り添い、いつでも相談をしてもらえる空気の良さを学び意識しました<br>
                 <br>
                 タイルマップでのレベルデザインでルートは何種類もある！という意識の元違った楽しさ面白さをだせるレベルデザインを考えて実行する能力を高めました
-              </p>
+              </div>
               <div class="trend-img-container work-img-container">
                 <img src="assets/game_recoil_flight_play.png" alt="Recoil Flight Screen">
               </div>
@@ -358,15 +373,16 @@
               </span>
             </summary>
             <div class="trend-details-content work-details-content">
-              <p data-i18n="work1_details_content">
+              <div data-i18n="work1_details_content">
+                <div class="details-section-title">💡 こだわり</div><br>
                 JAMの制作なのですが1本のゲームとして完成させたく、JAMの作品とは思えないボリューミーなゲームに仕上げることができました<br>
                 音楽はチームメンバーが一から制作しているのでこだわりがあります<br>
                 テンキーで遊べて農業の仕様とマッチするようにこだわりました、ゲーム画面が見やすく音楽ゲーム✖農場ゲームといったやりたくなる面白さを大切にしました<br>
                 <br>
-                ーーーーーーーーーーーーーーーーーーーーーーーーーーーーー<br>
-                <br>
+                <hr class="details-divider">
+                <div class="details-section-title experience-title">🔥 得られた経験</div><br>
                 仕様書の書き方とUIのデザイン力そしてギミックでどう面白くなるかを考え、落とし込む能力を高めましたリズムマシンという特殊デバイスのゲーム制作になりますのでUnityとの接続の仕方や展示する時のアクシデントなどの臨機応変の土台も高めることが出来ました
-              </p>
+              </div>
               <div class="trend-img-container work-img-container">
                 <img src="assets/game_harvethm_play.png" alt="Harvethm Screen">
               </div>
@@ -402,18 +418,19 @@
               </span>
             </summary>
             <div class="trend-details-content work-details-content">
-              <p data-i18n="work2_details_content">
+              <div data-i18n="work2_details_content">
+                <div class="details-section-title">💡 こだわり</div><br>
                 白身を直感的に動かしたいと考え、マウスやボタンではなくタッチ操作で動かすというのを考え軸にしました<br>
                 白身が左右で分かれているため2人でも1人でもできるゲーム性に出来ることができ、ハラハラとドキドキを味わえるよう上に上っていき卵の孵化を目指す仕様に落とし込みました<br>
                 レベルデザインと仕様書を担当し、遊んでもらう人に遊びながら覚えるというのを意識しました<br>
                 <br>
-                ーーーーーーーーーーーーーーーーーーーーーーーーーーー<br>
-                <br>
+                <hr class="details-divider">
+                <div class="details-section-title experience-title">🔥 得られた経験</div><br>
                 仕様書のプログラマ、デザイナーに伝わる書き方<br>
                 タスク振りわけ、会議進行などのプランナーの基礎的な仕事を経験することが出来ました<br>
                 レベルデザインの書き方と面白さと狙いを伝える能力を高めることが出来ました<br>
                 様々な学校の方がいらっしゃる場なので不安にさせない、嫌な気持ちにさせないコミュニケーション能力を大事にしもっと高めることが出来ました
-              </p>
+              </div>
               <div class="trend-img-container work-img-container">
                 <img src="assets/game_yolk_you_play.png" alt="Yolk you Screen">
               </div>
@@ -452,16 +469,17 @@
               </span>
             </summary>
             <div class="trend-details-content work-details-content">
-              <p data-i18n="work3_details_content">
+              <div data-i18n="work3_details_content">
+                <div class="details-section-title">💡 こだわり</div><br>
                 unity1weekを個人製作で行いました、テーマがうらで他の人とは違う案を作りたく、スーパーマリオ オデッセイの2Dと3Dが切り替わる瞬間にインスピレーションを受け、表の世界と裏の世界を同時に動かす案が生れました。そしてお互い同じ重力だとただ単に動かすだけになってしまうので裏の世界の重力を反転させ、動かすだけで面白いゲームに仕上げることが出来ました<br>
                 <br>
-                ーーーーーーーーーーーーーーーーーーーーーーーーーーー<br>
-                <br>
+                <hr class="details-divider">
+                <div class="details-section-title experience-title">🔥 得られた経験</div><br>
                 初の個人制作なのでUnityの機能に当たる、タイルマップやエフェクト、そしてプログラム全般を学ぶ機会になりました<br>
                 unity1weekが終了した後もブラッシュアップを行い、展示をさせていただき、お客様の声を聴いて更なるブラッシュアップを行える行動力と基礎的能力を高められました<br>
                 <br>
                 これを活かし次の個人製作につなげられる土台を得ました
-              </p>
+              </div>
               <div class="trend-img-container work-img-container">
                 <img src="assets/game_black_white_play.png" alt="Black & White Screen">
               </div>
@@ -497,18 +515,19 @@
               </span>
             </summary>
             <div class="trend-details-content work-details-content">
-              <p data-i18n="work4_details_content">
+              <div data-i18n="work4_details_content">
+                <div class="details-section-title">💡 こだわり</div><br>
                 初のブラウザゲーム制作にあたり、分かりやすく、すぐに遊べる事を<br>
                 意識しました！そのため簡単なゲームの中で生まれる感情を大切にし<br>
                 スマホでもPCでも出来るようにしました！<br>
                 デザイン面でも昔ながらのゲームセンターとキーボルダーゲームを<br>
                 イメージしました！<br>
                 <br>
-                ーーーーーーーーーーーーーーーーーーーーーーーーーーーーー<br>
-                <br>
+                <hr class="details-divider">
+                <div class="details-section-title experience-title">🔥 得られた経験</div><br>
                 githubを使用しブラウザに投稿する方法を学びました！<br>
                 ルールを簡単にし、ゲーム性を面白くすればしっかり遊べるゲームが制作できる事
-              </p>
+              </div>
               <div class="trend-img-container work-img-container">
                 <img src="assets/game_ox_play.png" alt="Ox Game Screen">
               </div>
@@ -697,6 +716,6 @@
 
 
 
-  <script src="main.js?v=1.0.6"></script>
+  <script src="main.js?v=1.2.3"></script>
 </body>
 </html>

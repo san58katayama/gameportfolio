@@ -464,6 +464,7 @@ body.lang-en .lang-btn .lang-en {
   grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
   gap: 3rem;
   text-align: left; /* グリッド内部を左揃えに */
+  align-items: start; /* アコーディオン展開時に隣のカードを引き伸ばさない */
 }
 
 .work-card {
@@ -556,8 +557,8 @@ body.lang-en .lang-btn .lang-en {
   margin-bottom: 1.5rem;
   line-height: 1.6;
   font-weight: 700;
-  flex-grow: 1;
   text-align: left;
+  min-height: 130px; /* 説明文の高さを揃えて、閉じているときのボタン位置を統一 */
 }
 
 .work-action {
@@ -797,19 +798,7 @@ body.lang-en .lang-btn .lang-en {
   margin-right: auto;
 }
 
-.recent-title-about {
-  font-family: var(--font-base);
-  font-size: 1.2rem;
-  font-weight: 900;
-  margin-bottom: 2rem;
-  color: var(--text-main);
-  background: var(--secondary);
-  border: 2px solid #000;
-  box-shadow: var(--shadow-sm);
-  width: fit-content;
-  padding: 4px 16px;
-  transform: rotate(-1.5deg);
-}
+
 
 .hobbies-title {
   font-family: var(--font-base);
@@ -1493,13 +1482,13 @@ footer p {
    ========================================================================== */
 .recent-status-badge {
   display: inline-block;
-  padding: 10px 24px;
+  padding: 6px 16px;
   background: var(--primary);
-  border: var(--border-thick);
+  border: 2px solid #000;
   color: #fff;
   font-family: var(--font-base);
   font-weight: 900;
-  font-size: 1.1rem;
+  font-size: 0.95rem;
   letter-spacing: 1px;
   margin-bottom: 3rem;
   box-shadow: var(--shadow-sm);
@@ -1513,6 +1502,12 @@ footer p {
   text-align: left;
 }
 
+/* アコーディオンのある1行目のカードのみ個別で配置をstartにして、展開時に隣を引き伸ばさないようにする */
+.trends-grid > .trend-card:nth-child(1),
+.trends-grid > .trend-card:nth-child(2) {
+  align-self: start;
+}
+
 .trend-card {
   background: #fff;
   border: var(--border-thick);
@@ -1522,6 +1517,53 @@ footer p {
   display: flex;
   flex-direction: column;
   transition: var(--transition);
+  position: relative; /* 画鋲の位置基準 */
+  transform: rotate(-1.2deg); /* デフォルトで少し左に傾ける */
+}
+
+/* 偶数番目のカードは右に傾ける */
+.trends-grid > .trend-card:nth-child(even) {
+  transform: rotate(1.2deg);
+}
+
+/* 画鋲（プッシュピン）の本体 */
+.trend-card::before {
+  content: '';
+  position: absolute;
+  top: -14px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 24px;
+  height: 24px;
+  background: radial-gradient(circle at 8px 8px, #ff2a5f 0%, #b3002d 70%, #66001a 100%);
+  border: 3px solid #000000;
+  border-radius: 50%;
+  box-shadow: 
+    3px 3px 0px #000000,
+    inset -2px -2px 0px rgba(0, 0, 0, 0.3);
+  z-index: 10;
+  pointer-events: none;
+}
+
+/* 画鋲のハイライト */
+.trend-card::after {
+  content: '';
+  position: absolute;
+  top: -10px;
+  left: calc(50% - 4px);
+  width: 6px;
+  height: 6px;
+  background: #ffffff;
+  border-radius: 50%;
+  z-index: 11;
+  pointer-events: none;
+}
+
+/* ホバー時に浮き上がり、真っ直ぐにする */
+.trend-card:hover {
+  transform: scale(1.02) rotate(0deg) !important;
+  box-shadow: var(--shadow-hover);
+  z-index: 5;
 }
 
 .trend-card h3 {
@@ -1561,10 +1603,20 @@ footer p {
   background: #f7f5ee;
 }
 
+.trend-img-container a {
+  display: block;
+  cursor: pointer;
+}
+
 .trend-img-container img {
   width: 100%;
   display: block;
   object-fit: cover;
+  transition: transform 0.2s ease;
+}
+
+.trend-img-container a:hover img {
+  transform: scale(1.02);
 }
 
 /* ==========================================================================
@@ -1782,6 +1834,37 @@ footer p {
 }
 
 /* ==========================================================================
+   Details Inner Section Titles (Commitment & Experience)
+   ========================================================================== */
+.details-section-title {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-family: var(--font-base);
+  font-weight: 900;
+  font-size: 0.95rem;
+  color: #ffffff;
+  background: var(--primary);
+  border: 2px solid #000000;
+  padding: 4px 12px;
+  box-shadow: 2px 2px 0px #000000;
+  margin-top: 0.5rem;
+  margin-bottom: 0.75rem;
+  transform: rotate(-1deg);
+}
+
+.details-section-title.experience-title {
+  background: var(--accent);
+  transform: rotate(1deg);
+}
+
+.details-divider {
+  border: none;
+  border-top: 2px dashed #000000;
+  margin: 1.25rem 0;
+}
+
+/* ==========================================================================
    Events Summary Styles
    ========================================================================== */
 .events-summary-container {
@@ -1853,11 +1936,7 @@ footer p {
   }
 }
 
-/* trend-cardのホバーエフェクト無効化（アコーディオン操作用） */
-.trend-card.no-hover:hover {
-  transform: none;
-  box-shadow: var(--shadow);
-}
+
 
 /* アコーディオン内の画像サイズを小さく抑えて中央寄せ */
 .trend-details .trend-img-container {
@@ -2057,3 +2136,127 @@ footer p {
   height: auto;
   display: block;
 }
+
+/* ==========================================================================
+   Trend Link Button Styles
+   ========================================================================== */
+.trend-link-btn {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 1.5rem;
+  padding: 12px 18px;
+  background: var(--secondary);
+  font-family: var(--font-base);
+  font-weight: 900;
+  font-size: 0.95rem;
+  color: var(--text-main);
+  text-decoration: none;
+  border: var(--border);
+  box-shadow: var(--shadow-sm);
+  transition: all 0.2s ease;
+  cursor: pointer;
+  box-sizing: border-box;
+}
+
+.trend-link-btn:hover {
+  background: #ffea00;
+  box-shadow: 2px 2px 0px #000;
+  transform: translate(2px, 2px);
+}
+
+.trend-link-btn::after {
+  content: '▶';
+  font-size: 0.8rem;
+  display: inline-block;
+  color: var(--primary);
+  margin-left: auto;
+}
+
+/* ==========================================================================
+   About Document Section Styles
+   ========================================================================== */
+.about-document-section {
+  margin-top: 1.5rem;
+  margin-bottom: 1.5rem;
+  padding: 1.2rem;
+  background: #fdfcf7;
+  border: var(--border);
+  box-shadow: var(--shadow-sm);
+  border-radius: 4px;
+}
+
+.document-section-tag {
+  display: inline-block;
+  background: var(--primary);
+  color: #fff;
+  font-weight: 800;
+  font-size: 0.8rem;
+  padding: 2px 8px;
+  border-radius: 3px;
+  margin-bottom: 0.8rem;
+}
+
+.document-section-desc {
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: var(--text-sub);
+  line-height: 1.6;
+  margin-bottom: 1rem !important;
+}
+
+.btn-doc {
+  display: inline-flex;
+  align-items: center;
+  padding: 10px 16px;
+  font-size: 0.9rem;
+  text-decoration: none;
+}
+
+.document-thumbnail-container {
+  max-width: 100%;
+  margin-top: 0.5rem;
+  margin-bottom: 0;
+  border: var(--border);
+  box-shadow: var(--shadow-sm);
+  overflow: hidden;
+  border-radius: 4px;
+  background: #f7f5ee;
+  transition: all 0.2s ease;
+}
+
+.document-thumbnail-container:hover {
+  box-shadow: 2px 2px 0px #000;
+  transform: translate(2px, 2px);
+}
+
+.document-thumbnail {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+  transition: transform 0.2s ease;
+}
+
+.document-thumbnail-container:hover .document-thumbnail {
+  transform: scale(1.02);
+}
+
+.document-thumbnail-container.no-hover {
+  transition: none;
+}
+
+.document-thumbnail-container.no-hover:hover {
+  box-shadow: var(--shadow-sm);
+  transform: none;
+}
+
+.document-thumbnail-container.no-hover .document-thumbnail {
+  transition: none;
+}
+
+.document-thumbnail-container.no-hover:hover .document-thumbnail {
+  transform: none;
+}
+
+
