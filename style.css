@@ -273,8 +273,8 @@ body.lang-en .lang-btn .lang-en {
 }
 
 .hero-image-card:hover {
-  transform: rotate(0deg) scale(1.03);
-  box-shadow: 16px 16px 0px #000;
+  transform: rotate(3deg);
+  box-shadow: var(--shadow-lg);
 }
 
 .hero-image-card img {
@@ -302,7 +302,7 @@ body.lang-en .lang-btn .lang-en {
 
 .hero-content h1 {
   font-family: var(--font-comic);
-  font-size: 4rem;
+  font-size: 3.2rem;
   font-weight: normal;
   line-height: 1.1;
   margin-bottom: 2rem;
@@ -319,7 +319,7 @@ body.lang-en .lang-btn .lang-en {
 }
 
 .hero-content p {
-  font-size: 1.2rem;
+  font-size: 1.05rem;
   color: var(--text-sub);
   margin-bottom: 3rem;
   line-height: 1.8;
@@ -372,6 +372,11 @@ body.lang-en .lang-btn .lang-en {
   color: #ffffff;
   transform: translate(3px, 3px);
   box-shadow: var(--shadow-hover);
+}
+
+.btn-recent:hover, .btn-recent:active {
+  background: var(--accent) !important;
+  color: #ffffff !important;
 }
 
 .btn-block {
@@ -624,7 +629,6 @@ body.lang-en .lang-btn .lang-en {
 /* 1行目: コミックイエロー */
 .about-profile-meta .meta-row:nth-child(1) {
   background: var(--secondary);
-  transform: rotate(-2deg);
 }
 .about-profile-meta .meta-row:nth-child(1) span.material-symbols-outlined {
   color: var(--primary);
@@ -634,7 +638,6 @@ body.lang-en .lang-btn .lang-en {
 .about-profile-meta .meta-row:nth-child(2) {
   background: var(--primary);
   color: #fff;
-  transform: rotate(1.8deg);
 }
 .about-profile-meta .meta-row:nth-child(2) span.material-symbols-outlined {
   color: #fff;
@@ -644,7 +647,6 @@ body.lang-en .lang-btn .lang-en {
 .about-profile-meta .meta-row:nth-child(3) {
   background: var(--accent);
   color: #fff;
-  transform: rotate(-1.2deg);
 }
 .about-profile-meta .meta-row:nth-child(3) span.material-symbols-outlined {
   color: var(--secondary);
@@ -652,8 +654,8 @@ body.lang-en .lang-btn .lang-en {
 
 /* ホバー時の「ばああああん！」と飛び出すエフェクト */
 .about-profile-meta .meta-row:hover {
-  transform: scale(1.04) rotate(0deg);
-  box-shadow: 12px 12px 0px #000;
+  transform: none;
+  box-shadow: var(--shadow);
   cursor: default;
 }
 
@@ -782,17 +784,31 @@ body.lang-en .lang-btn .lang-en {
 }
 
 /* 趣味セクション */
-.about-hobbies {
-  margin-top: 2.5rem;
-  padding-top: 1.5rem;
-  border-top: 3px solid #000;
+.about-recent {
+  margin-top: 3.5rem;
+  padding-top: 2.5rem;
+  border-top: 3px dashed #000;
   display: flex;
   flex-direction: column;
   align-items: center;
   width: 100%;
-  max-width: 900px;
+  max-width: 1100px;
   margin-left: auto;
   margin-right: auto;
+}
+
+.recent-title-about {
+  font-family: var(--font-base);
+  font-size: 1.2rem;
+  font-weight: 900;
+  margin-bottom: 2rem;
+  color: var(--text-main);
+  background: var(--secondary);
+  border: 2px solid #000;
+  box-shadow: var(--shadow-sm);
+  width: fit-content;
+  padding: 4px 16px;
+  transform: rotate(-1.5deg);
 }
 
 .hobbies-title {
@@ -827,16 +843,7 @@ body.lang-en .lang-btn .lang-en {
   min-height: 200px;
 }
 
-.hobby-card:hover {
-  transform: translate(-3px, -3px) rotate(1.5deg);
-  box-shadow: 6px 6px 0px #000;
-  z-index: 10;
-}
 
-.hobby-card:nth-child(even):hover {
-  transform: translate(-3px, -3px) rotate(-1.5deg);
-  z-index: 10;
-}
 
 .hobby-img-wrapper {
   width: 100%;
@@ -859,20 +866,8 @@ body.lang-en .lang-btn .lang-en {
   z-index: 2;
 }
 
-.hobby-card:hover .hobby-img-wrapper img {
-  width: 280px;
-  height: 200px;
-  object-fit: contain;
-  background: #111;
-  border: var(--border-thick);
-  box-shadow: var(--shadow);
-  transform: translate(-50%, -50%) rotate(-3deg);
-  z-index: 100;
-}
-
-.hobby-card:nth-child(even):hover .hobby-img-wrapper img {
-  transform: translate(-50%, -50%) rotate(3deg);
-  z-index: 100;
+.hobby-img-wrapper img[src*="hobby_cat"] {
+  object-position: center top;
 }
 
 .hobby-info {
@@ -895,6 +890,13 @@ body.lang-en .lang-btn .lang-en {
   color: var(--text-sub);
   line-height: 1.4;
   margin-bottom: 0;
+}
+
+@media (min-width: 769px) {
+  .hobby-line {
+    display: inline-block;
+    white-space: nowrap;
+  }
 }
 
 .about-avatar-placeholder::after {
@@ -1044,10 +1046,36 @@ body.lang-en .lang-btn .lang-en {
 .skill-info {
   display: flex;
   justify-content: space-between;
+  align-items: center;
   font-size: 0.95rem;
   font-weight: 800;
   margin-bottom: 0.4rem;
   color: var(--text-main);
+}
+
+.skill-name-container {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.skill-logo {
+  width: 20px;
+  height: 20px;
+  object-fit: contain;
+  border-radius: 2px;
+}
+
+.skill-title {
+  font-size: 1.05rem;
+  font-weight: 900;
+  color: var(--text-main);
+}
+
+.skill-desc {
+  font-size: 0.82rem;
+  color: var(--text-muted);
+  font-weight: 700;
 }
 
 .skill-bar-bg {
@@ -1366,11 +1394,7 @@ footer p {
   z-index: 1;
 }
 
-.collage-card:hover {
-  transform: scale(1.08) rotate(0deg);
-  box-shadow: var(--shadow-lg);
-  z-index: 10;
-}
+
 
 .events-list-container {
   display: flex;
@@ -1397,11 +1421,7 @@ footer p {
   transform: rotate(-0.5deg);
 }
 
-.event-item-speechbubble:hover {
-  transform: scale(1.04) rotate(0deg);
-  box-shadow: var(--shadow);
-  background: var(--secondary);
-}
+
 
 .speech-star {
   color: var(--primary);
@@ -1529,14 +1549,7 @@ footer p {
   font-weight: 700;
 }
 
-.trend-card:hover {
-  transform: translate(-3px, -3px) rotate(0.5deg);
-  box-shadow: 12px 12px 0px #000;
-}
 
-.trend-card:nth-child(even):hover {
-  transform: translate(-3px, -3px) rotate(-0.5deg);
-}
 
 .trend-img-container {
   width: 100%;
@@ -1589,7 +1602,7 @@ footer p {
   }
 
   .hero-content h1 {
-    font-size: 3.5rem;
+    font-size: 2.8rem;
   }
   
   .profile-skills-grid {
@@ -1625,7 +1638,7 @@ footer p {
   }
 
   .hero-content h1 {
-    font-size: 3rem;
+    font-size: 2.4rem;
   }
 
   .hero-content h1 .title-line {
@@ -1695,3 +1708,352 @@ footer p {
   }
 }
 
+/* ==========================================================================
+   Details / Accordion Styles (Comic Accordion)
+   ========================================================================== */
+.trend-details {
+  margin-top: 1.5rem;
+  border: var(--border);
+  background: #ffffff;
+  box-shadow: var(--shadow-sm);
+  transition: var(--transition);
+}
+
+.trend-details[open] {
+  box-shadow: 2px 2px 0px #000;
+  transform: translate(2px, 2px);
+}
+
+.trend-summary {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 18px;
+  background: var(--secondary);
+  font-family: var(--font-base);
+  font-weight: 900;
+  font-size: 0.95rem;
+  cursor: pointer;
+  border-bottom: none;
+  list-style: none; /* Hide default arrow */
+  transition: background-color 0.2s ease;
+}
+
+.trend-details[open] .trend-summary {
+  border-bottom: var(--border);
+}
+
+.trend-summary::-webkit-details-marker {
+  display: none; /* Hide default arrow in Safari */
+}
+
+.trend-summary::after {
+  content: '▶';
+  font-size: 0.8rem;
+  transition: transform 0.2s cubic-bezier(0.18, 0.89, 0.32, 1.28);
+  display: inline-block;
+  color: var(--primary);
+  margin-left: auto;
+}
+
+.trend-details[open] .trend-summary::after {
+  transform: rotate(90deg);
+}
+
+.trend-summary:hover {
+  background: #ffea00;
+}
+
+.trend-details-content {
+  padding: 16px 18px;
+  font-size: 0.92rem;
+  line-height: 1.7;
+  font-weight: 700;
+  color: var(--text-sub);
+  background: #faf8f5;
+}
+
+.trend-details-content p {
+  margin-bottom: 1.25rem;
+}
+
+.trend-details-content p:last-child {
+  margin-bottom: 0;
+}
+
+/* ==========================================================================
+   Events Summary Styles
+   ========================================================================== */
+.events-summary-container {
+  display: grid;
+  grid-template-columns: 1.2fr 1fr; /* 左側（テキスト）を広げ、右側（画像）を元の比率に戻す */
+  gap: 2.5rem;
+  margin-top: 3.5rem;
+  padding: 2rem;
+  background: #ffffff;
+  border: var(--border-thick);
+  box-shadow: var(--shadow-lg);
+  align-items: center;
+  text-align: left;
+}
+
+.events-summary-text h3 {
+  font-family: var(--font-base);
+  font-size: 1.4rem;
+  font-weight: 900;
+  color: var(--text-main);
+  margin-bottom: 0;
+  background: var(--secondary);
+  border: var(--border);
+  box-shadow: var(--shadow-sm);
+  width: fit-content;
+  padding: 6px 20px;
+  transform: rotate(-1deg);
+}
+
+.events-summary-text p {
+  font-size: 1rem;
+  line-height: 1.8;
+  font-weight: 700;
+  color: var(--text-sub);
+}
+
+.events-summary-img {
+  border: var(--border);
+  box-shadow: var(--shadow-sm);
+  overflow: hidden;
+  background: #f7f5ee;
+  transform: rotate(2deg);
+  transition: var(--transition);
+}
+
+.events-summary-img:hover {
+  transform: rotate(0deg) scale(1.02);
+  box-shadow: var(--shadow);
+}
+
+.events-summary-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* Responsive for Event Summary */
+@media (max-width: 992px) {
+  .events-summary-container {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+    padding: 2rem;
+  }
+  
+  .events-summary-img {
+    max-width: 450px;
+    margin: 0 auto;
+  }
+}
+
+/* trend-cardのホバーエフェクト無効化（アコーディオン操作用） */
+.trend-card.no-hover:hover {
+  transform: none;
+  box-shadow: var(--shadow);
+}
+
+/* アコーディオン内の画像サイズを小さく抑えて中央寄せ */
+.trend-details .trend-img-container {
+  max-width: 320px;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* ==========================================================================
+   Events Summary Media & Speech Bubble Styles
+   ========================================================================== */
+.summary-title-wrap {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  margin-bottom: 1.5rem;
+  flex-wrap: nowrap; /* デスクトップでは絶対に折り返さず横並びを維持 */
+}
+
+/* アメコミ風の吹き出し（極太ボーダーと立体的な影でインパクト重視） */
+.speech-bubble-comic {
+  position: relative;
+  background: var(--primary); /* イエローからピンクに変更してインパクト最大化 */
+  border: 4px solid #000; /* さらに太いボーダーに */
+  box-shadow: 6px 6px 0px #000; /* より立体感のある太い影 */
+  padding: 12px 20px;
+  font-weight: 900;
+  font-size: 1.05rem; /* テキストサイズをアップ */
+  color: #fff; /* 背景がピンクになったので白文字で読みやすく */
+  text-align: center;
+  border-radius: 16px; /* 少し丸みを強調してポップに */
+  max-width: 240px; /* 改行が入るので幅を微調整 */
+  z-index: 10;
+  letter-spacing: 1px;
+  transition: transform 0.15s ease-in-out, background-color 0.15s ease-in-out;
+}
+
+/* タイトルの右隣用のインライン吹き出し（歪みと傾きでインパクト最大化） */
+.speech-bubble-comic.inline-bubble {
+  margin-bottom: 0;
+  transform: rotate(-3deg) skewX(-4deg);
+}
+
+/* しっぽ（三角）を左向きに変更（太ボーダーに合わせ調整） */
+.speech-bubble-comic.inline-bubble::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: -14px; /* ボーダーが太くなったので調整 */
+  transform: translateY(-50%) rotate(90deg);
+  border-width: 12px 10px 0;
+  border-style: solid;
+  border-color: #000 transparent transparent;
+  display: block;
+  width: 0;
+  bottom: auto;
+}
+
+.speech-bubble-comic.inline-bubble::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: -8px;
+  transform: translateY(-50%) rotate(90deg);
+  border-width: 10px 8px 0;
+  border-style: solid;
+  border-color: var(--primary) transparent transparent; /* 背景と同じピンクに */
+  display: block;
+  width: 0;
+  z-index: 11;
+  bottom: auto;
+}
+
+.events-summary-media {
+  display: flex;
+  gap: 1.25rem;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+.events-summary-img.no-effect {
+  border: var(--border);
+  box-shadow: var(--shadow-sm);
+  overflow: hidden;
+  background: #f7f5ee;
+  transform: none !important;
+  transition: none !important;
+  width: 100%;
+  max-width: 240px; /* 2枚並べるためにサイズを縮小 */
+  margin: 0;
+}
+
+.events-summary-img.no-effect:hover {
+  transform: none !important;
+  box-shadow: var(--shadow-sm) !important;
+}
+
+.events-summary-img.no-effect img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* レスポンシブ調整（まとめエリア） */
+@media (max-width: 992px) {
+  .events-summary-container {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .events-summary-media {
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+  }
+
+  .summary-title-wrap {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+
+  /* モバイルでは吹き出しが下に落ちるため、しっぽを上向きに調整 */
+  .speech-bubble-comic.inline-bubble {
+    transform: rotate(1.5deg);
+  }
+
+  .speech-bubble-comic.inline-bubble::after {
+    top: -10px;
+    left: 30px;
+    bottom: auto;
+    transform: rotate(180deg);
+  }
+
+  .speech-bubble-comic.inline-bubble::before {
+    top: -7px;
+    left: 32px;
+    bottom: auto;
+    transform: rotate(180deg);
+  }
+}
+
+/* ==========================================================================
+   Works Section Accordion Styles (Ox Game)
+   ========================================================================== */
+.work-details {
+  margin-top: 1.25rem;
+  margin-bottom: 1.5rem;
+}
+
+.work-summary {
+  padding: 10px 14px;
+}
+
+.summary-check-wrap {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  font-weight: 800;
+  font-size: 0.9rem;
+}
+
+.work-check-icon {
+  width: 22px;
+  height: 22px;
+  object-fit: contain;
+  vertical-align: middle;
+}
+
+.work-details-content {
+  padding: 14px;
+}
+
+.work-details-content p {
+  font-size: 0.85rem;
+  line-height: 1.6;
+  font-weight: 700;
+  color: var(--text-sub);
+}
+
+.work-details .work-img-container {
+  max-width: 100%;
+  margin-top: 1rem;
+  border: var(--border);
+  box-shadow: var(--shadow-sm);
+  overflow: hidden;
+  border-radius: 4px;
+  background: #f7f5ee;
+}
+
+.work-details .work-img-container img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
