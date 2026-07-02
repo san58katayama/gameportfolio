@@ -135,13 +135,28 @@
             </div>
             
             <div class="about-achievements">
-              <h4 class="achievement-title" data-i18n="about_ach_title">🏆 実績 / Achievements</h4>
-              <ul class="achievement-list">
-                <li>
-                  <strong data-i18n="about_ach1">BSGJ2026審査員賞、審査員賞「Yolk you」</strong>
-                  <span data-i18n="about_ach1_role">（仕様書、レベルデザイン、プランナー担当）</span>
-                </li>
-              </ul>
+              <div class="about-achievements-flex">
+                <!-- 左側：実績タイトル + テキスト + ボタン -->
+                <div class="achievement-left">
+                  <h4 class="achievement-title" data-i18n="about_ach_title">🏆 実績 / Achievements</h4>
+                  <ul class="achievement-list">
+                    <li>
+                      <strong data-i18n="about_ach1">BSGJ2026審査員賞、審査員賞「Yolk you」</strong>
+                      <span data-i18n="about_ach1_role">（仕様書、レベルデザイン、プランナー担当）</span>
+                    </li>
+                  </ul>
+                  <a href="#yolk-you" class="view-work-btn-overlay">
+                    <span data-i18n="view_yolk_you">作品を見る：Yolk you</span>
+                    <span class="btn-arrow-icon">▶</span>
+                  </a>
+                </div>
+                <!-- 右側：受賞写真（実績タイトルと並行） -->
+                <div class="achievement-right">
+                  <div class="achievement-img-container">
+                    <img src="assets/yolk_you_award.jpg" alt="受賞時の様子" class="achievement-img">
+                  </div>
+                </div>
+              </div>
             </div>
 
             <div class="about-info-list">
@@ -157,80 +172,108 @@
         <div class="skills-list-compact">
 
           <!-- 企画力 -->
-          <div class="skill-item">
+          <div class="skill-item skill-planning-item">
             <div class="skill-info">
               <span class="skill-name-container">
                 <span class="skill-title" data-i18n="skill_planning_title">企画力</span>
               </span>
-              <span>100%</span>
             </div>
-            <div class="skill-bar-bg"><div class="skill-bar-fill" style="width: 100%;"></div></div>
+            <div class="skill-detail-desc" data-i18n="skill_planning_desc">
+              ★ <b>インプットとアイデアのメモ習慣</b><br>
+              日々映画やゲームを通じて多様なインプットを行い、ひらめいたアイデアを即座にメモする習慣を大切にしています。<br><br>
+              ★ <b>深い集中力と発想力</b><br>
+              散歩や音楽鑑賞を通じて自分の世界に深く没頭し、クリエイティブな思考や独自のゲームコンセプトを膨らませるのが得意です。<br><br>
+              一番影響を受けた映画：<br>
+              借りぐらしのアリエッティ<br>
+              <div class="influence-img-container">
+                <img src="assets/influence_movie.jpg" alt="借りぐらしのアリエッティ" class="influence-img">
+              </div>
+              一番影響を受けたゲーム：<br>
+              ペーパーマリオ スーパーシール<br>
+              <div class="influence-img-container">
+                <img src="assets/influence_game.jpg" alt="ペーパーマリオ スーパーシール" class="influence-img">
+              </div>
+            </div>
           </div>
 
           <!-- PowerPoint -->
-          <div class="skill-item">
+          <div class="skill-item skill-ppt-item">
             <div class="skill-info">
               <span class="skill-name-container">
                 <img src="assets/logo_powerpoint.png" class="skill-logo" alt="PowerPoint">
                 <span class="skill-title" data-i18n="skill_ppt_title">PowerPoint</span>
                 <span class="skill-desc" data-i18n="skill_ppt_desc">：企画書：発表資料</span>
               </span>
-              <span>100%</span>
             </div>
-            <div class="skill-bar-bg"><div class="skill-bar-fill" style="width: 100%;"></div></div>
+            <div class="skill-detail-desc" data-i18n="skill_ppt_detail_desc">
+              企画書作成：16枚<br>
+              発表資料作成：10回<br><br>
+              ★ <b>「見やすく・面白く・飽きさせない」資料づくり</b><br>
+              企画書や発表資料を作成する際は、読み手がワクワクし、最後まで退屈せずに読める構成やレイアウトにこだわっています。<br>
+              <div class="skill-pdf-thumb-container">
+                <a href="assets/presentation.pdf" target="_blank" rel="noopener noreferrer" class="skill-pdf-thumb-link">
+                  <img src="assets/presentation_thumb.png" alt="発表資料サムネイル" class="skill-pdf-thumb">
+                </a>
+              </div>
+            </div>
           </div>
 
           <!-- Excel -->
-          <div class="skill-item">
+          <div class="skill-item skill-excel-item">
             <div class="skill-info">
               <span class="skill-name-container">
                 <img src="assets/logo_excel.png" class="skill-logo" alt="Excel">
                 <span class="skill-title" data-i18n="skill_excel_title">Excel</span>
                 <span class="skill-desc" data-i18n="skill_excel_desc">：仕様書：レベルデザイン</span>
               </span>
-              <span>100%</span>
             </div>
-            <div class="skill-bar-bg"><div class="skill-bar-fill" style="width: 100%;"></div></div>
+            <div class="skill-detail-desc" data-i18n="skill_excel_detail_desc">
+              ★ <b>仕様を伝えるために</b><br>
+              色分けをし、自分が何処を担当しているか分かりやすいようにしています。<br>
+              <div class="trend-img-container">
+                <img src="assets/spec_excel.png" alt="Excel仕様・タスク管理" style="max-width: 100%; height: auto;">
+              </div>
+            </div>
           </div>
 
           <!-- Unity -->
-          <div class="skill-item">
+          <div class="skill-item skill-unity-item">
             <div class="skill-info">
               <span class="skill-name-container">
                 <img src="assets/logo_unity.png" class="skill-logo" alt="Unity">
                 <span class="skill-title" data-i18n="skill_unity_title">Unity</span>
                 <span class="skill-desc" data-i18n="skill_unity_desc">：タイルマップ：基本機能</span>
               </span>
-              <span>70%</span>
             </div>
-            <div class="skill-bar-bg"><div class="skill-bar-fill" style="width: 70%;"></div></div>
+            <div class="skill-detail-desc" data-i18n="skill_unity_detail_desc">
+              ★ <b>Unityの経験：1年</b><br>
+              個人製作やチーム制作に貢献できるように勉強し基本の操作は分かるようになりました。<br>
+              マップを直感的に設計したいので、自分でタイルマップを触っています。<br>
+              <div class="trend-img-container">
+                <img src="assets/spec_unity.png" alt="Unity Tilemap 編集画面" style="max-width: 100%; height: auto;">
+              </div>
+            </div>
           </div>
 
           <!-- Unreal Engine -->
-          <div class="skill-item">
+          <div class="skill-item skill-unreal-item">
             <div class="skill-info">
               <span class="skill-name-container">
                 <img src="assets/logo_unreal.svg" class="skill-logo" alt="Unreal Engine">
                 <span class="skill-title" data-i18n="skill_unreal_title">Unreal Engine</span>
                 <span class="skill-desc" data-i18n="skill_unreal_desc">：ムービー制作</span>
               </span>
-              <span>40%</span>
             </div>
-            <div class="skill-bar-bg"><div class="skill-bar-fill" style="width: 40%;"></div></div>
+            <div class="skill-detail-desc" data-i18n="skill_unreal_detail_desc">
+              ★ <b>マップとムービー制作</b><br>
+              コツコツと制作することが多くマップとムービーにこだわりがあります。特にライティングを意識しており、Unreal Engineの良さを引き出します。<br>
+              <div class="trend-img-container">
+                <img src="assets/spec_unreal.png" alt="Unreal Engine シネマティック画面" style="max-width: 100%; height: auto;">
+              </div>
+            </div>
           </div>
 
-          <!-- ティラノビルダー -->
-          <div class="skill-item">
-            <div class="skill-info">
-              <span class="skill-name-container">
-                <img src="assets/logo_tyrano.png" class="skill-logo" alt="TyranoBuilder">
-                <span class="skill-title" data-i18n="skill_tyrano_title">ティラノビルダー</span>
-                <span class="skill-desc" data-i18n="skill_tyrano_desc">：物語の制作</span>
-              </span>
-              <span>50%</span>
-            </div>
-            <div class="skill-bar-bg"><div class="skill-bar-fill" style="width: 50%;"></div></div>
-          </div>
+
 
         </div>
       </div>
@@ -260,7 +303,7 @@
             <summary class="trend-summary" data-i18n="recent_item2_summary">得られたこと</summary>
             <div class="trend-details-content">
               <p data-i18n="recent_item2_details">
-                後輩育成の場やサークルという人をどう動かし<br>経験をしてもらうかを考え実行できる能力を<br>高めることができました！
+                後輩育成の場やサークル活動を通じて、メンバーをどう動かし、経験をしてもらうかを考え実行できる<br>能力を高めることができました！
               </p>
               <div class="trend-img-container">
                 <img src="assets/recent_jam_club.jpg" alt="Club JAM Progress">
@@ -325,21 +368,18 @@
             <div class="trend-details-content work-details-content">
               <div data-i18n="work5_details_content">
                 <div class="details-section-title">💡 こだわり</div><br>
-                学校内のゲームJAMに参加し制作した作品です<br>
-                テーマは【発射】で考えられる案は沢山ありました<br>
-                何かを発射するのはシンプルなので違った案にしたいと考え銃の反動で進む【反動✖イライラ棒ゲーム】を制作しました！シンプルなデザインですがエフェクトにこだわりを入れております<br>
-                ゴールにたどり着くまでに死んで攻略そしてたどり着いた時のエフェクトと達成感の面白さを追求しました
+                学内ゲームJAMにて制作した作品です。テーマ「発射」に対し、単に弾を発射するだけでなく、銃の「反動（発射）」を利用して進む【反動×イライラ棒アクション】というひねりを加えた企画を考案しました。何度も挑戦（試行錯誤）した末にゴールに到達した際のエフェクト演出にこだわり、プレイヤーが得られる大きな達成感と面白さを追求しました。<br>
                 <br>
                 <hr class="details-divider">
                 <div class="details-section-title experience-title">🔥 得られた経験</div><br>
-                チームには後輩の子がいたので案をどう考えて面白さを出すかを一緒に考えながら育成＋後輩にどう教えるかのコミュニケーション能力を高めました<br>
+                ・チームに後輩メンバーが在籍していたため、ゲームをどう面白くしていくかのプロセスを共に考えながら、後輩の育成に携わりました。人に教える難しさを学ぶと共に、チーム内のコミュニケーション能力を高める経験となりました。<br>
                 <br>
-                プログラマと寄り添い、いつでも相談をしてもらえる空気の良さを学び意識しました<br>
+                ・プログラマに常に寄り添い、どんな些細な疑問や提案でも気軽に相談してもらえる「話しやすい雰囲気（心理的安全性）」を意識してチーム構築を行う大切さを学びました。<br>
                 <br>
-                タイルマップでのレベルデザインでルートは何種類もある！という意識の元違った楽しさ面白さをだせるレベルデザインを考えて実行する能力を高めました
+                ・タイルマップを用いたレベルデザインにおいて、「攻略ルートを複数用意する」ことを意識しました。ルートごとに異なる体験や楽しさを提供する設計手法を学び、実装まで落とし込む能力を高めました。
               </div>
               <div class="trend-img-container work-img-container">
-                <img src="assets/game_recoil_flight_play.png" alt="Recoil Flight Screen">
+                <img src="assets/game_recoil_flight_play.gif" alt="Recoil Flight Screen">
               </div>
             </div>
           </details>
@@ -360,7 +400,7 @@
           <h3 data-i18n="work1_title">Harvethm – ハーベズム –</h3>
           <div class="work-role-exhibit">
             <p class="work-role"><strong data-i18n="role_label">担当:</strong> <span data-i18n="work1_role">プランナー：仕様書：ギミック担当</span></p>
-            <p class="work-exhibit"><strong data-i18n="exhibit_label">出展:</strong> <span data-i18n="work1_exhibit">GGX #NEXUSJAM 出展</span></p>
+            <p class="work-exhibit"><strong data-i18n="exhibit_label">出展:</strong> <span data-i18n="work1_exhibit">GGX NEXUS JAM：GGX Games Showcase展示</span></p>
           </div>
           <p class="work-desc" data-i18n="work1_desc">おじいちゃんの農園を継いでやってきた少女は、音楽の神様と出会い1年間の契約をします。作物を育てて演奏をする、音楽×農業ゲーム🎶収穫して得たお金で、自分だけの音色に拡張することも……！</p>
 
@@ -375,16 +415,17 @@
             <div class="trend-details-content work-details-content">
               <div data-i18n="work1_details_content">
                 <div class="details-section-title">💡 こだわり</div><br>
-                JAMの制作なのですが1本のゲームとして完成させたく、JAMの作品とは思えないボリューミーなゲームに仕上げることができました<br>
-                音楽はチームメンバーが一から制作しているのでこだわりがあります<br>
-                テンキーで遊べて農業の仕様とマッチするようにこだわりました、ゲーム画面が見やすく音楽ゲーム✖農場ゲームといったやりたくなる面白さを大切にしました<br>
+                ゲームJAMでの制作ながら「1本のゲームとしての完成度」にこだわり、短期間とは思えないボリューム感とクオリティを実現しました。<br>
+                チームメンバーが一から手掛けたオリジナル音楽に合わせ、テンキーで手軽に遊べる農業仕様を採用。「音楽×農場」というジャンルがもたらす、直感的で繰り返し遊びたくなる魅力を徹底的に追求しました。<br>
                 <br>
                 <hr class="details-divider">
                 <div class="details-section-title experience-title">🔥 得られた経験</div><br>
-                仕様書の書き方とUIのデザイン力そしてギミックでどう面白くなるかを考え、落とし込む能力を高めましたリズムマシンという特殊デバイスのゲーム制作になりますのでUnityとの接続の仕方や展示する時のアクシデントなどの臨機応変の土台も高めることが出来ました
+                ・企画仕様書の書き方、UIデザイン、そして独自ギミックをゲームの面白さに落とし込む設計力を高めました。<br>
+                <br>
+                ・「リズムマシン」という実機の特殊デバイスを用いた開発だったため、ハードウェア（Unity連携）との接続処理や、展示会での不測のトラブルに対する臨機応変な対応力を養うことができました。
               </div>
               <div class="trend-img-container work-img-container">
-                <img src="assets/game_harvethm_play.png" alt="Harvethm Screen">
+                <img src="assets/game_harvethm_play.gif" alt="Harvethm Screen">
               </div>
             </div>
           </details>
@@ -396,7 +437,7 @@
       </div>
 
       <!-- 作品2: Yolk you -->
-      <div class="work-card">
+      <div class="work-card" id="yolk-you">
         <div class="work-img-wrapper">
           <img src="assets/game_yolk_you.png" alt="Yolk you">
         </div>
@@ -405,7 +446,7 @@
           <h3 data-i18n="work2_title">Yolk you</h3>
           <div class="work-role-exhibit">
             <p class="work-role"><strong data-i18n="role_label">担当:</strong> <span data-i18n="work2_role">プランナー：仕様書：ギミック担当：レベルデザイン</span></p>
-            <p class="work-exhibit"><strong data-i18n="exhibit_label">出展:</strong> <span data-i18n="work2_exhibit">bitsummit-gamejam2026 出展</span></p>
+            <p class="work-exhibit"><strong data-i18n="exhibit_label">出展:</strong> <span data-i18n="work2_exhibit">BitSummit Game Jam 2026：BitSummit PUNCH展示</span></p>
           </div>
           <p class="work-desc" data-i18n="work2_desc">「あなたは”白身”、黄身をこぼさず目的地までたどり着こう！」キッチンから飛び出し、森を抜け、最後にはなんと○○に進む！道中には、卵を狙うカラスなどたくさんの困難が待ち構える！協力してワイワイ！黄身がこぼれるドキドキ！協力2Dジャンプアクションゲーム！！</p>
 
@@ -420,19 +461,17 @@
             <div class="trend-details-content work-details-content">
               <div data-i18n="work2_details_content">
                 <div class="details-section-title">💡 こだわり</div><br>
-                白身を直感的に動かしたいと考え、マウスやボタンではなくタッチ操作で動かすというのを考え軸にしました<br>
-                白身が左右で分かれているため2人でも1人でもできるゲーム性に出来ることができ、ハラハラとドキドキを味わえるよう上に上っていき卵の孵化を目指す仕様に落とし込みました<br>
-                レベルデザインと仕様書を担当し、遊んでもらう人に遊びながら覚えるというのを意識しました<br>
+                キャラクター（白身）を直感的に動かせるよう、マウスやキーボードではなく「タッチ操作」をメイン軸に設計しました。<br>
+                白身が左右に分かれている特徴を活かして「1人でも2人でも楽しめる協力性」を生み出し、卵の孵化を目指して上へ登っていくハラハラ・ドキドキ感を演出しました。レベルデザインと仕様書作成を担当し、チュートリアルに頼らず「遊びながら自然とルールを学べる」導線設計を意識しました。<br>
                 <br>
                 <hr class="details-divider">
                 <div class="details-section-title experience-title">🔥 得られた経験</div><br>
-                仕様書のプログラマ、デザイナーに伝わる書き方<br>
-                タスク振りわけ、会議進行などのプランナーの基礎的な仕事を経験することが出来ました<br>
-                レベルデザインの書き方と面白さと狙いを伝える能力を高めることが出来ました<br>
-                様々な学校の方がいらっしゃる場なので不安にさせない、嫌な気持ちにさせないコミュニケーション能力を大事にしもっと高めることが出来ました
+                ・プログラマやデザイナーに意図が正しく伝わる仕様書の記述法を学びました。また、メンバーへのタスク割り振りや会議のファシリテーションなど、ゲームプランナーとしての基本的な進行・管理業務を実践できました。<br>
+                ・ゲームの意図や面白さを他者に伝えるための、レベルデザイン資料の構成力とプレゼンテーション能力を向上させることができました。<br>
+                ・他校の学生が集まる開発環境だったため、相手を不安にさせず前向きに開発に取り組めるよう、丁寧でポジティブなコミュニケーションを心がけ、チームの士気を高めました。
               </div>
               <div class="trend-img-container work-img-container">
-                <img src="assets/game_yolk_you_play.png" alt="Yolk you Screen">
+                <img src="assets/game_yolk_you_play.gif" alt="Yolk you Screen">
               </div>
             </div>
           </details>
@@ -453,7 +492,7 @@
           <h3 data-i18n="work3_title">Black ＆ White</h3>
           <div class="work-role-exhibit">
             <p class="work-role"><strong data-i18n="role_label">担当:</strong> <span data-i18n="work3_role">ソロ開発</span></p>
-            <p class="work-exhibit"><strong data-i18n="exhibit_label">出展:</strong> <span data-i18n="work3_exhibit">ゲームパビリオンjp2026 出展 / bitsummit2026 出展</span></p>
+            <p class="work-exhibit"><strong data-i18n="exhibit_label">出展:</strong> <span data-i18n="work3_exhibit">ゲームパビリオンjp2026 展示：BitSummit PUNCH展示</span></p>
           </div>
           <p class="work-desc" data-i18n="work3_desc">
             これは表の世界と裏の世界にいるキューブの物語<br>
@@ -471,17 +510,17 @@
             <div class="trend-details-content work-details-content">
               <div data-i18n="work3_details_content">
                 <div class="details-section-title">💡 こだわり</div><br>
-                unity1weekを個人製作で行いました、テーマがうらで他の人とは違う案を作りたく、スーパーマリオ オデッセイの2Dと3Dが切り替わる瞬間にインスピレーションを受け、表の世界と裏の世界を同時に動かす案が生れました。そしてお互い同じ重力だとただ単に動かすだけになってしまうので裏の世界の重力を反転させ、動かすだけで面白いゲームに仕上げることが出来ました<br>
+                「Unity1週間ゲーム開発（unity1week）」に個人開発で挑戦した作品です。<br>
+                テーマ「うら」に対し、他とは異なる斬新なアイデアを模索。『スーパーマリオ オデッセイ』の次元切り替えから着想を得て、「表の世界」と「裏の世界」のキャラクターを同時に操作するシステムを構築しました。<br>
+                単なる並行操作に留まらず、裏の世界の重力を「反転」させることで、パズルアクションとしての奥深さと、動かすだけで楽しいプレイング体験を実現しました。<br>
                 <br>
                 <hr class="details-divider">
                 <div class="details-section-title experience-title">🔥 得られた経験</div><br>
-                初の個人制作なのでUnityの機能に当たる、タイルマップやエフェクト、そしてプログラム全般を学ぶ機会になりました<br>
-                unity1weekが終了した後もブラッシュアップを行い、展示をさせていただき、お客様の声を聴いて更なるブラッシュアップを行える行動力と基礎的能力を高められました<br>
-                <br>
-                これを活かし次の個人製作につなげられる土台を得ました
+                ・初めての個人制作として、Unityのタイルマップ機能やエフェクト実装、C#プログラミング全般を一から習得する貴重な機会となりました。<br>
+                ・イベント終了後も妥協せずブラッシュアップを重ねて外部展示会へ出展。来場者から直接いただいたフィードバックをもとに、さらなるゲームの改善へつなげる行動力と、ユーザー視点を第一に捉える設計力を培いました。この経験は、今後の個人開発の強固な土台となっています。
               </div>
               <div class="trend-img-container work-img-container">
-                <img src="assets/game_black_white_play.png" alt="Black & White Screen">
+                <img src="assets/game_black_white_play.gif" alt="Black & White Screen">
               </div>
             </div>
           </details>
@@ -517,19 +556,16 @@
             <div class="trend-details-content work-details-content">
               <div data-i18n="work4_details_content">
                 <div class="details-section-title">💡 こだわり</div><br>
-                初のブラウザゲーム制作にあたり、分かりやすく、すぐに遊べる事を<br>
-                意識しました！そのため簡単なゲームの中で生まれる感情を大切にし<br>
-                スマホでもPCでも出来るようにしました！<br>
-                デザイン面でも昔ながらのゲームセンターとキーボルダーゲームを<br>
-                イメージしました！<br>
+                初のブラウザゲーム制作にあたり、「分かりやすさ」と「すぐに遊べる手軽さ」を最優先に設計しました。シンプルなゲームプレイだからこそ生まれるプレイヤーの一喜一憂する感情を大切にし、スマートフォンとPCの両方で快適に遊べるマルチデバイス対応を行いました。デザイン面では、昔ながらの「ゲームセンター」や「液晶キーホルダーゲーム」をモチーフにし、レトロで遊び心のあるビジュアルを意識して制作しました。<br>
                 <br>
                 <hr class="details-divider">
                 <div class="details-section-title experience-title">🔥 得られた経験</div><br>
-                githubを使用しブラウザに投稿する方法を学びました！<br>
-                ルールを簡単にし、ゲーム性を面白くすればしっかり遊べるゲームが制作できる事
+                ・GitHubを活用し、自身が制作したゲームをブラウザ上に公開し、ユーザーに届けるまでの一連の開発フローを習得しました。<br>
+                <br>
+                ・ルールを極限までシンプルに削ぎ落とし、ゲーム性の楽しさを研ぎ澄ますことで、小規模な開発でありながらもプレイヤーが繰り返し遊べるゲームバランスを構築する手法を学びました。
               </div>
               <div class="trend-img-container work-img-container">
-                <img src="assets/game_ox_play.png" alt="Ox Game Screen">
+                <img src="assets/game_ox_play.gif" alt="Ox Game Screen">
               </div>
             </div>
           </details>
@@ -566,47 +602,47 @@
       <div class="events-list-container">
         <div class="event-item-speechbubble">
           <span class="speech-star">★</span>
-          <div class="event-item-text" data-i18n="event_item1">OGF2025</div>
+          <div class="event-item-text" data-i18n="event_item1">OPEN GAME FEST<span class="event-item-sub">：ボランティアスタッフ</span></div>
         </div>
         <div class="event-item-speechbubble">
           <span class="speech-star">★</span>
-          <div class="event-item-text" data-i18n="event_item2">bitsummit2025</div>
+          <div class="event-item-text" data-i18n="event_item2">BitSummit the 13th Summer of Yokai<span class="event-item-sub">：ボランティアスタッフ</span></div>
         </div>
         <div class="event-item-speechbubble">
           <span class="speech-star">★</span>
-          <div class="event-item-text" data-i18n="event_item3">大阪万博：京都ブース お手伝い</div>
+          <div class="event-item-text" data-i18n="event_item3">大阪・関西万博関西パビリオン京都ゾーン：<br><span class="event-item-sub">ボランティアスタッフ</span></div>
         </div>
         <div class="event-item-speechbubble">
           <span class="speech-star">★</span>
-          <div class="event-item-text" data-i18n="event_item4">大阪インディーゲームサミット2025</div>
+          <div class="event-item-text" data-i18n="event_item4">OSAKA INDIE GAMES SUMMIT 2025<span class="event-item-sub">：ボランティアスタッフ</span></div>
         </div>
         <div class="event-item-speechbubble">
           <span class="speech-star">★</span>
-          <div class="event-item-text" data-i18n="event_item5">KBS京都情報系番組「きゅんと」出演</div>
+          <div class="event-item-text" data-i18n="event_item5">KBS京都情報系番組「きゅんと」ゲスト出演：<br><span class="event-item-sub">大阪・関西万博関西パビリオン京都ゾーンでの<br>ボランティアスタッフ経験インタビュー</span></div>
         </div>
         <div class="event-item-speechbubble">
           <span class="speech-star">★</span>
-          <div class="event-item-text" data-i18n="event_item6">GGX</div>
+          <div class="event-item-text" data-i18n="event_item6">GGX NEXUS JAM<span class="event-item-sub">：プランナーとして参加</span></div>
         </div>
         <div class="event-item-speechbubble">
           <span class="speech-star">★</span>
-          <div class="event-item-text" data-i18n="event_item7">SEIKAサブカルフェスタ2025</div>
+          <div class="event-item-text" data-i18n="event_item7">SEIKAサブカルフェスタ2025<span class="event-item-sub">：ボランティアスタッフ</span></div>
         </div>
         <div class="event-item-speechbubble">
           <span class="speech-star">★</span>
-          <div class="event-item-text" data-i18n="event_item8">京都企業説明会MC</div>
+          <div class="event-item-text" data-i18n="event_item8">京都企業説明会MC：<span class="event-item-sub">eスポーツの市場拡大に<br>ついてのプレゼンテーションを行う</span></div>
         </div>
         <div class="event-item-speechbubble">
           <span class="speech-star">★</span>
-          <div class="event-item-text" data-i18n="event_item9">オープンキャンパススタッフ</div>
+          <div class="event-item-text" data-i18n="event_item9">ゲームパビリオンjp2026<span class="event-item-sub">：ゲーム展示</span></div>
         </div>
         <div class="event-item-speechbubble">
           <span class="speech-star">★</span>
-          <div class="event-item-text" data-i18n="event_item10">bitsummit2026</div>
+          <div class="event-item-text" data-i18n="event_item10">オープンキャンパススタッフ<span class="event-item-sub">：ゲーム学系</span></div>
         </div>
         <div class="event-item-speechbubble">
           <span class="speech-star">★</span>
-          <div class="event-item-text" data-i18n="event_item11">RIT様との合同JAM</div>
+          <div class="event-item-text" data-i18n="event_item11">BitSummit PUNCH<span class="event-item-sub">：ボランティアスタッフ：ゲーム展示</span></div>
         </div>
       </div>
     </div>

@@ -79,7 +79,7 @@ body {
   display: inline-block;
   font-family: var(--font-comic);
   font-size: 2.8rem;
-  font-weight: normal;
+  font-weight: 800;
   text-transform: uppercase;
   letter-spacing: 2px;
   margin-bottom: 5rem;
@@ -293,6 +293,7 @@ body.lang-en .lang-btn .lang-en {
   color: #fff;
   font-family: var(--font-comic);
   font-size: 1.1rem;
+  font-weight: 800;
   letter-spacing: 2px;
   margin-bottom: 2rem;
   box-shadow: var(--shadow-sm);
@@ -340,6 +341,7 @@ body.lang-en .lang-btn .lang-en {
   padding: 14px 36px;
   border-radius: 4px; /* 直角に近いポップな角 */
   font-family: var(--font-comic);
+  font-weight: 800;
   font-size: 1.3rem;
   letter-spacing: 1px;
   text-decoration: none;
@@ -446,6 +448,7 @@ body.lang-en .lang-btn .lang-en {
   padding: 8px 24px;
   border-radius: 4px;
   font-family: var(--font-comic);
+  font-weight: 800;
   font-size: 1.2rem;
   cursor: pointer;
   transition: var(--transition);
@@ -519,7 +522,7 @@ body.lang-en .lang-btn .lang-en {
 .work-info h3 {
   font-family: var(--font-comic);
   font-size: 1.8rem;
-  font-weight: normal;
+  font-weight: 800;
   margin-bottom: 0.75rem;
   color: var(--text-main);
   letter-spacing: 1px;
@@ -669,6 +672,7 @@ body.lang-en .lang-btn .lang-en {
   display: flex;
   flex-direction: column;
   gap: 2rem;
+  flex-grow: 1;
 }
 
 .about-avatar-placeholder {
@@ -713,16 +717,162 @@ body.lang-en .lang-btn .lang-en {
   color: var(--primary);
 }
 
+.about-achievements-flex {
+  display: flex;
+  gap: 1.5rem;
+  margin-top: 0.75rem;
+  align-items: flex-start;
+}
+
+.achievement-left {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+}
+
+.achievement-right {
+  flex: 1.2;
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+}
+
+.achievement-img-with-bubble {
+  position: relative;
+  display: block;
+  margin-top: 0.5rem;
+  width: 100%;
+}
+
+.achievement-img-with-bubble .achievement-img-container {
+  margin: 0;
+}
+
+/* 吹き出しは写真の右上に重なる形で配置 */
+.speech-bubble {
+  position: absolute;
+  right: -5px;
+  top: 15%;
+  background: #fff;
+  border: 2px solid #000;
+  border-radius: 20px;
+  padding: 6px 12px;
+  box-shadow: 2px 2px 0px #000;
+  z-index: 5;
+  white-space: nowrap;
+  font-weight: 900;
+  font-size: 0.82rem;
+  color: #000;
+  transform: rotate(2deg);
+}
+
+/* しっぽ：写真の中の人（左方向）へ向く */
+.speech-bubble::before {
+  content: '';
+  position: absolute;
+  bottom: -9px;
+  left: 18px;
+  border-width: 9px 0 0 9px;
+  border-style: solid;
+  border-color: #000 transparent;
+  display: block;
+  width: 0;
+}
+
+.speech-bubble::after {
+  content: '';
+  position: absolute;
+  bottom: -6px;
+  left: 19px;
+  border-width: 7px 0 0 7px;
+  border-style: solid;
+  border-color: #fff transparent;
+  display: block;
+  width: 0;
+}
+
+.achievement-preview-container {
+  position: relative;
+  display: block;
+  width: 100%;
+  margin-top: 0.5rem;
+}
+
+.achievement-img-container {
+  border: var(--border);
+  box-shadow: 3px 3px 0px #000000;
+  border-radius: 4px;
+  overflow: hidden;
+  background: #fff;
+}
+
+.achievement-img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* ボタン: 黄色背景 + 右矢印 */
+.view-work-btn-overlay {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  margin-top: 0.75rem;
+  padding: 8px 16px;
+  background: var(--secondary);
+  border: var(--border);
+  box-shadow: 3px 3px 0px #000000;
+  color: #000;
+  text-decoration: none;
+  font-weight: 900;
+  font-size: 1rem;
+  transition: var(--transition);
+  cursor: pointer;
+  box-sizing: border-box;
+}
+
+.view-work-btn-overlay:hover {
+  transform: translate(2px, 2px);
+  box-shadow: 1px 1px 0px #000000;
+  background: #ffea00;
+}
+
+.view-work-btn-overlay:active {
+  transform: translate(3px, 3px);
+  box-shadow: none;
+}
+
+.btn-arrow-icon {
+  font-size: 0.9rem;
+  flex-shrink: 0;
+  color: var(--primary);
+}
+
+@media (max-width: 576px) {
+  .about-achievements-flex {
+    flex-direction: column;
+    gap: 1rem;
+    align-items: stretch;
+  }
+  .speech-bubble {
+    right: -5px;
+    top: 10%;
+  }
+}
+
 .achievement-list {
   list-style: none;
   padding-left: 0;
+  margin-bottom: 0.6rem;
 }
 
 .achievement-list li {
-  font-size: 0.95rem;
+  font-size: 0.9rem;
   font-weight: 700;
   color: var(--text-sub);
-  line-height: 1.6;
+  line-height: 1.5;
 }
 
 .achievement-list li strong {
@@ -732,16 +882,21 @@ body.lang-en .lang-btn .lang-en {
   border: 2px solid #000;
   box-shadow: 2px 2px 0px #000;
   display: inline-block;
-  margin-right: 0.5rem;
+  width: fit-content;
   font-weight: 800;
-  margin-bottom: 0.5rem;
+  margin-bottom: 0.3rem;
+  font-size: 0.9rem;
+  white-space: nowrap;
 }
 
 .achievement-list li span {
   display: block;
-  margin-top: 0.2rem;
-  font-size: 0.9rem;
+  margin-top: 0.1rem;
+  font-size: 0.85rem;
   color: var(--text-muted);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 /* 外部リンクボタン */
@@ -908,12 +1063,15 @@ body.lang-en .lang-btn .lang-en {
   border-radius: 4px;
   position: relative;
   text-align: left;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
 }
 
 .about-text-compact h3 {
   font-family: var(--font-comic);
   font-size: 2.2rem;
-  font-weight: normal;
+  font-weight: 900;
   margin-bottom: 1rem;
   color: var(--text-main);
   letter-spacing: 1px;
@@ -955,7 +1113,7 @@ body.lang-en .lang-btn .lang-en {
 }
 
 .about-info-list {
-  margin-top: 1.5rem;
+  margin-top: 1.2rem;
   display: grid;
   grid-template-columns: 1fr;
   gap: 0.75rem;
@@ -973,6 +1131,7 @@ body.lang-en .lang-btn .lang-en {
   display: inline-block;
   width: 90px;
   font-family: var(--font-comic);
+  font-weight: 800;
   font-size: 1.1rem;
   letter-spacing: 1px;
 }
@@ -1008,7 +1167,7 @@ body.lang-en .lang-btn .lang-en {
 .skill-group h4 {
   font-family: var(--font-comic);
   font-size: 1.4rem;
-  font-weight: normal;
+  font-weight: 800;
   margin-bottom: 1.5rem;
   border-bottom: var(--border);
   padding-bottom: 0.5rem;
@@ -1030,6 +1189,87 @@ body.lang-en .lang-btn .lang-en {
 
 .skill-item:last-child {
   margin-bottom: 0;
+}
+
+.skill-planning-item {
+  margin-bottom: 1.0rem;
+}
+
+.skill-detail-desc {
+  font-size: 0.85rem;
+  color: var(--text-sub);
+  line-height: 1.6;
+  font-weight: 700;
+  margin-top: 0.5rem;
+  padding: 12px 16px;
+  background-color: #f7f5ee;
+  border: var(--border);
+  border-radius: 4px;
+  box-shadow: 2px 2px 0px #000;
+  text-align: left;
+}
+
+.influence-img-container {
+  margin: 0.75rem 0;
+  border: var(--border);
+  box-shadow: 2px 2px 0px #000;
+  border-radius: 4px;
+  overflow: hidden;
+  max-width: 140px;
+  background: #fff;
+}
+
+.influence-img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.skill-ppt-item {
+  margin-bottom: 1.0rem;
+}
+
+.skill-excel-item {
+  margin-bottom: 1.0rem;
+}
+
+.skill-unity-item {
+  margin-bottom: 1.0rem;
+}
+
+.skill-unreal-item {
+  margin-bottom: 1.0rem;
+}
+
+.skills-list-compact .trend-img-container {
+  max-width: 240px;
+}
+
+.skill-pdf-thumb-container {
+  margin-top: 1rem;
+}
+
+.skill-pdf-thumb-link {
+  display: inline-block;
+  border: var(--border);
+  box-shadow: 2px 2px 0px #000;
+  border-radius: 4px;
+  overflow: hidden;
+  max-width: 140px;
+  background: #fff;
+  transition: transform 0.15s, box-shadow 0.15s;
+  cursor: pointer;
+}
+
+.skill-pdf-thumb-link:hover {
+  transform: translate(1px, 1px);
+  box-shadow: 1px 1px 0px #000;
+}
+
+.skill-pdf-thumb {
+  width: 100%;
+  height: auto;
+  display: block;
 }
 
 .skill-info {
@@ -1212,6 +1452,7 @@ footer p {
 .modal-header h2 {
   font-family: var(--font-comic);
   font-size: 2.5rem;
+  font-weight: 900;
   margin-bottom: 0.5rem;
   color: var(--text-main);
   letter-spacing: 1px;
@@ -1220,6 +1461,7 @@ footer p {
 .modal-header .modal-subtitle {
   color: var(--primary);
   font-family: var(--font-comic);
+  font-weight: 800;
   font-size: 1.2rem;
   letter-spacing: 1px;
   margin-bottom: 1.5rem;
@@ -1243,6 +1485,7 @@ footer p {
 
 .modal-details h4 {
   font-family: var(--font-comic);
+  font-weight: 800;
   font-size: 1.3rem;
   margin-bottom: 0.5rem;
   color: var(--accent);
@@ -1281,6 +1524,7 @@ footer p {
   color: var(--text-main);
   flex-shrink: 0;
   font-family: var(--font-comic);
+  font-weight: 800;
   font-size: 1.05rem;
   letter-spacing: 1px;
 }
@@ -1401,14 +1645,14 @@ footer p {
   padding: 8px 16px;
   font-weight: 800;
   font-size: 0.95rem;
-  transform: rotate(0.5deg);
   width: fit-content;
   transition: var(--transition);
 }
 
-.event-item-speechbubble:nth-child(even) {
-  transform: rotate(-0.5deg);
+.event-item-sub {
+  color: var(--text-muted);
 }
+
 
 
 
@@ -1518,12 +1762,6 @@ footer p {
   flex-direction: column;
   transition: var(--transition);
   position: relative; /* 画鋲の位置基準 */
-  transform: rotate(-1.2deg); /* デフォルトで少し左に傾ける */
-}
-
-/* 偶数番目のカードは右に傾ける */
-.trends-grid > .trend-card:nth-child(even) {
-  transform: rotate(1.2deg);
 }
 
 /* 画鋲（プッシュピン）の本体 */
