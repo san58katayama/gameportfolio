@@ -1150,6 +1150,31 @@ body.lang-en .lang-btn .lang-en {
   flex-direction: column;
 }
 
+/* 「MY SKILLS」ヘッダーの背景をパステルイエロー、文字色を黒に変更 */
+.skills-col .section-title {
+  background: #fff080; /* パステルイエロー */
+  color: #000000;
+}
+.skills-col .section-title span {
+  color: var(--text-sub);
+}
+
+/* PC表示（993px以上）で、左右のカラムの間にコマ割り風の縦線を引く */
+@media (min-width: 993px) {
+  .profile-skills-grid {
+    gap: 0; /* gapを0にして、paddingで余白を制御 */
+  }
+  .profile-col {
+    padding-right: 2.5rem; /* 左カラムの右余白 */
+  }
+  .skills-col {
+    padding-left: 2.5rem; /* 右カラムの左余白 */
+    border-left: 4px solid #000000; /* カラム間の境界縦線 */
+  }
+}
+
+
+
 .skills-list-compact {
   display: flex;
   flex-direction: column;
@@ -1892,6 +1917,13 @@ footer p {
   .profile-skills-grid {
     grid-template-columns: 1fr;
     gap: 4rem;
+  }
+
+  /* スマホ・タブレット表示で上下のセクションを分ける破線を追加 */
+  .profile-col {
+    border-bottom: 4px dashed #000000;
+    padding-bottom: 3.5rem;
+    margin-bottom: 1.5rem;
   }
 
   .modal-grid {
