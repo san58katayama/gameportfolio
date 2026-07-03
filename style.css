@@ -1906,23 +1906,61 @@ footer p {
 
 @media (max-width: 768px) {
   .header-container {
-    padding: 1rem 1.5rem;
+    padding: 0.8rem 1.5rem;
+    position: relative;
   }
 
   nav {
     display: none;
   }
 
+  nav.active {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.98);
+    padding: 1.5rem;
+    border-bottom: 4px solid #000000;
+    gap: 1.5rem;
+    z-index: 101;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  }
+
+  nav.active a {
+    width: 100%;
+    text-align: center;
+    padding: 0.5rem 0;
+  }
+
   .menu-toggle {
-    display: block;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 36px;
+    height: 36px;
+    cursor: pointer;
+  }
+
+  .menu-toggle span {
+    font-size: 1.8rem;
+    font-weight: bold;
   }
 
   .section-container {
-    padding: 6rem 1.5rem;
+    padding: 5rem 1.25rem;
+  }
+
+  .section-title {
+    font-size: 1.8rem;
+    padding: 8px 24px;
+    margin-bottom: 3.5rem;
   }
 
   .hero-content h1 {
-    font-size: 2.4rem;
+    font-size: 2.2rem;
   }
 
   .hero-content h1 .title-line {
@@ -1989,6 +2027,72 @@ footer p {
   .trends-grid {
     grid-template-columns: 1fr;
     gap: 2rem;
+  }
+
+  /* Worksグリッドのモバイル対応 */
+  .works-grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  /* フッターのモバイル対応 */
+  footer {
+    padding: 2.5rem 1.25rem;
+  }
+
+  .footer-container {
+    flex-direction: column;
+    gap: 1.5rem;
+    text-align: center;
+  }
+
+  .footer-links {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem 1.5rem;
+  }
+
+  /* コンタクトボックスのモバイル対応 */
+  .contact-box {
+    padding: 2.5rem 1.25rem 2rem;
+  }
+}
+
+/* ==========================================================================
+   Responsive Styles (Mobile Small Viewports)
+   ========================================================================== */
+@media (max-width: 480px) {
+  .logo {
+    font-size: 1rem;
+  }
+
+  .logo span {
+    padding: 1px 6px;
+    margin-left: 2px;
+  }
+
+  .lang-btn {
+    font-size: 0.8rem;
+    padding: 1px 6px;
+    box-shadow: 2px 2px 0px #000;
+  }
+
+  .header-right {
+    gap: 0.5rem;
+  }
+
+  .header-container {
+    padding: 0.8rem 1rem;
+  }
+
+  .section-title {
+    font-size: 1.4rem;
+    padding: 6px 16px;
+    margin-bottom: 2.5rem;
+  }
+
+  .hero-content h1 {
+    font-size: 1.8rem;
   }
 }
 

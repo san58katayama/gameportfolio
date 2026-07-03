@@ -67,12 +67,12 @@ const translations = {
     event_caption3:   "BitSummit 2025 ボランティアチーム",
     event_item1:      "OPEN GAME FEST<span class=\"event-item-sub\">：ボランティアスタッフ</span>",
     event_item2:      "BitSummit the 13th Summer of Yokai<span class=\"event-item-sub\">：ボランティアスタッフ</span>",
-    event_item3:      "大阪・関西万博関西パビリオン京都ゾーン：<br><span class=\"event-item-sub\">ボランティアスタッフ</span>",
+    event_item3:      "大阪・関西万博関西パビリオン京都ゾーン<span class=\"event-item-sub\">：<br>ボランティアスタッフ</span>",
     event_item4:      "OSAKA INDIE GAMES SUMMIT 2025<span class=\"event-item-sub\">：ボランティアスタッフ</span>",
-    event_item5:      "KBS京都情報系番組「きゅんと」ゲスト出演：<br><span class=\"event-item-sub\">大阪・関西万博関西パビリオン京都ゾーンでの<br>ボランティアスタッフ経験インタビュー</span>",
+    event_item5:      "KBS京都情報系番組「きゅんと」ゲスト出演<span class=\"event-item-sub\">：<br>大阪・関西万博関西パビリオン京都ゾーンでの<br>ボランティアスタッフ経験インタビュー</span>",
     event_item6:      "GGX NEXUS JAM<span class=\"event-item-sub\">：プランナーとして参加</span>",
     event_item7:      "SEIKAサブカルフェスタ2025<span class=\"event-item-sub\">：ボランティアスタッフ</span>",
-    event_item8:      "京都企業説明会MC：<span class=\"event-item-sub\">eスポーツの市場拡大に<br>ついてのプレゼンテーションを行う</span>",
+    event_item8:      "京都企業説明会MC<span class=\"event-item-sub\">：eスポーツの市場拡大に<br>ついてのプレゼンテーションを行う</span>",
     event_item9:      "ゲームパビリオンjp2026<span class=\"event-item-sub\">：ゲーム展示</span>",
     event_item10:     "オープンキャンパススタッフ<span class=\"event-item-sub\">：ゲーム学系</span>",
     event_item11:     "BitSummit PUNCH<span class=\"event-item-sub\">：ボランティアスタッフ：ゲーム展示</span>",
@@ -214,12 +214,12 @@ const translations = {
     event_caption3:   "BitSummit 2025 Volunteer Team",
     event_item1:      "OPEN GAME FEST<span class=\"event-item-sub\">: Volunteer Staff</span>",
     event_item2:      "BitSummit the 13th Summer of Yokai<span class=\"event-item-sub\">: Volunteer Staff</span>",
-    event_item3:      "Expo 2025 Osaka Kyoto Pavilion:<br><span class=\"event-item-sub\">Volunteer Staff</span>",
+    event_item3:      "Expo 2025 Osaka Kyoto Pavilion<span class=\"event-item-sub\">:<br>Volunteer Staff</span>",
     event_item4:      "OSAKA INDIE GAMES SUMMIT 2025<span class=\"event-item-sub\">: Volunteer Staff</span>",
-    event_item5:      "KBS Kyoto TV Show 'Kyunto!' Guest Appearance:<br><span class=\"event-item-sub\">Interview on Volunteer Experience at<br>Expo 2025 Osaka Kyoto Pavilion</span>",
+    event_item5:      "KBS Kyoto TV Show 'Kyunto!' Guest Appearance<span class=\"event-item-sub\">:<br>Interview on Volunteer Experience at<br>Expo 2025 Osaka Kyoto Pavilion</span>",
     event_item6:      "GGX NEXUS JAM<span class=\"event-item-sub\">: Participated as a Planner</span>",
     event_item7:      "SEIKA Subculture Festival 2025<span class=\"event-item-sub\">: Volunteer Staff</span>",
-    event_item8:      "Kyoto Career Briefing MC:<br><span class=\"event-item-sub\">Gave a presentation on e-sports<br>market expansion</span>",
+    event_item8:      "Kyoto Career Briefing MC<span class=\"event-item-sub\">:<br>Gave a presentation on e-sports<br>market expansion</span>",
     event_item9:      "Game Pavilion jp 2026<span class=\"event-item-sub\">: Game Exhibition</span>",
     event_item10:     "Open Campus Staff<span class=\"event-item-sub\">: Digital Game Department</span>",
     event_item11:     "BitSummit PUNCH<span class=\"event-item-sub\">: Volunteer Staff & Game Exhibition</span>",
@@ -388,37 +388,27 @@ window.addEventListener('scroll', () => {
 });
 
 /* ==========================================================================
-   Mobile Burger Menu (Simplified Demo)
+   Mobile Burger Menu
    ========================================================================== */
 const menuToggle = document.querySelector('.menu-toggle');
 const navElement = document.querySelector('nav');
 
 if (menuToggle && navElement) {
   menuToggle.addEventListener('click', () => {
-    const isMobileNavOpen = navElement.style.display === 'flex';
-    
+    const isMobileNavOpen = navElement.classList.toggle('active');
     if (isMobileNavOpen) {
-      navElement.style.display = 'none';
-      menuToggle.innerHTML = '<span class="material-symbols-outlined">menu</span>';
-    } else {
-      navElement.style.display = 'flex';
-      navElement.style.flexDirection = 'column';
-      navElement.style.position = 'absolute';
-      navElement.style.top = '100%';
-      navElement.style.left = '0';
-      navElement.style.width = '100%';
-      navElement.style.background = 'rgba(255, 255, 255, 0.98)';
-      navElement.style.padding = '1.5rem';
-      navElement.style.borderBottom = '1px solid var(--border)';
       menuToggle.innerHTML = '<span class="material-symbols-outlined">close</span>';
+    } else {
+      menuToggle.innerHTML = '<span class="material-symbols-outlined">menu</span>';
     }
   });
 
   // メニューアイテムがクリックされたら閉じる
+  const navLinks = document.querySelectorAll('nav a');
   navLinks.forEach(link => {
     link.addEventListener('click', () => {
       if (window.innerWidth <= 768) {
-        navElement.style.display = 'none';
+        navElement.classList.remove('active');
         menuToggle.innerHTML = '<span class="material-symbols-outlined">menu</span>';
       }
     });
